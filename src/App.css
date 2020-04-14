@@ -17,7 +17,6 @@
 }
 
 .App-header {
-  font-family: Playfair Display,serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,8 +24,41 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #6b6b6b;
+  white-space: pre-wrap;
 }
 
+.App-header h2 {
+  font-family: Playfair Display,serif;
+}
+
+.button {
+
+  font-size: 1.4rem;
+  line-height: 35px;
+  background-color: #DAF8FF;
+  color:
+  #00b1da;
+  background: linear-gradient(259.07deg,
+  #DAF8FF 4.07%,
+  #B2EAF8 100%);
+  box-shadow: 0px 8px 20px
+  #E5F4F5;
+  transition-duration: 0.1s;
+
+  cursor: pointer;
+  position: relative;
+  padding: 0.25em 3em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+  text-align: center;
+  transition: all linear 0.3s;
+  transition-duration: 0.3s;
+  border: none;
+}
 .App-link {
   color: #61dafb;
 }

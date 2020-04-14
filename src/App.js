@@ -1,16 +1,28 @@
-import React from 'react';
-import logo from './aiLogo500white.png';
-import './App.css';
+import React from "react";
+import "./App.css";
+import {Home, About} from "./Components";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Hello</h2>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;
