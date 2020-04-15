@@ -4,7 +4,7 @@ import { useHistory } from 'react-router'
 function About() {
   const { push } = useHistory()
   return (
-    <div>
+    <div className="About">
       <img src={Constants.appLogo} className="App-logo" alt="logo" />
       <h2>Hello, I'm Ai</h2>
       <p>{Constants.aboutMe}</p>

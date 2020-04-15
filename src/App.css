@@ -3,6 +3,13 @@
   font-family: Nunito,sans-serif;
   font-size: 1.6rem;
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(6px + 1.5vmin);
+  color: #6b6b6b;
+  white-space: pre-wrap;
 }
 
 .App-logo {
@@ -16,18 +23,18 @@
   }
 }
 
-.App-header {
+.Home {
   min-height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: #6b6b6b;
-  white-space: pre-wrap;
+  white-space: pre-wrap; */
 }
 
-.App-header h2 {
+h2 {
   font-family: Playfair Display,serif;
 }
 

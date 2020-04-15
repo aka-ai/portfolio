@@ -6,7 +6,7 @@ import { useHistory } from 'react-router'
 function Home(props) {
   const { push } = useHistory()
   return (
-    <div className="App-header">
+    <div className="Home">
       <img src={Constants.appLogo} className="App-logo" alt="logo" />
       <h2>Hello, I'm Ai</h2>
       <p>{Constants.brieflyAboutMe}</p>
