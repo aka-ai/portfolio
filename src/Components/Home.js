@@ -10,7 +10,7 @@ function Home(props) {
       <img src={Constants.appLogo} className="App-logo" alt="logo" />
       <h2>Hello, I'm Ai</h2>
       <p>{Constants.brieflyAboutMe}</p>
-      <a className="button" href={About} onClick={()=> push("/about")}>A little more about me</a>
+      <a className="button" onClick={()=> push("/about")}>A little more about me</a>
     </div>
   )
 }
