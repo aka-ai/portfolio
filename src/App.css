@@ -6,8 +6,11 @@
   font-size: calc(6px + 1.5vmin);
   color: #6b6b6b;
   white-space: pre-wrap;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -26,10 +29,10 @@
 
 h2 {
   font-family: Playfair Display,serif;
+  color: #2F2F2F;
 }
 
 .button {
-
   font-size: 1.4rem;
   line-height: 35px;
   background-color: #DAF8FF;
@@ -41,7 +44,6 @@ h2 {
   box-shadow: 0px 8px 20px
   #E5F4F5;
   transition-duration: 0.1s;
-
   cursor: pointer;
   position: relative;
   padding: 0.25em 3em;
@@ -88,9 +90,51 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  margin: 2%;
 }
 .nav-image {
-  width: 3vw;
+  width: 40px;
+  height: auto;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  align-items: center;
+}
+.About-background {
+   animation: 3s ease-out 0s 1 slideInFromRight;
+  background-image: url('./Components/Constants/pinkBackground.png');
+  height: 100vh;
+  margin-left: 25vw;
+
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-0.1vw);
+  }
+}
+.About img {
+  width: 150px;
   height: auto;
 }
+.About-content {
+  position: fixed;
+  top: 12vh;
+  left: 10vw;
+  width: 50vw;
+  animation: fadein 3s;
+}
+
+@keyframes fadein {
+    0% { opacity: 0; }
+    60% { opacity: 0;}
+    100% { opacity: 1; }
+}
+
+.contact-button {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
