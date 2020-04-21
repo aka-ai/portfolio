@@ -4,14 +4,15 @@
   font-size: 1.6rem;
   background-color: #fff;
   font-size: calc(6px + 1.5vmin);
-  color: #6b6b6b;
+  /* color: #6b6b6b; */
+  color: #374785;
   white-space: pre-wrap;
   height: 100vh;
   margin: 0;
   padding: 0;
   /* overflow: hidden; */
 }
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -20,29 +21,29 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.Home {
-  min-height: 100vh;
-
+.home {
+  position: fixed;
+  top: 12vh;
+  left: 10vw;
+  width: 50vw;
+  animation: fadein 3s;
 }
 
 h2 {
   font-family: Playfair Display,serif;
-  color: #2F2F2F;
+  /* color: #2F2F2F; */
+  color : #24305E;
 }
 
-.button {
+.home-button {
   font-size: 1.4rem;
   line-height: 35px;
-  background-color: #DAF8FF;
-  color:
-  #00b1da;
-  background: linear-gradient(259.07deg,
-  #DAF8FF 4.07%,
-  #B2EAF8 100%);
-  box-shadow: 0px 8px 20px
-  #E5F4F5;
+  background-color: #A8D0E6;
+  color: #374785;
+  background: linear-gradient(259.07deg, #A8D0E6 4.07%, rgb(215, 233, 243) 100%);
+  box-shadow: 0px 8px 20px rgb(230, 241, 247);
   transition-duration: 0.1s;
   cursor: pointer;
   position: relative;
@@ -58,17 +59,28 @@ h2 {
   transition-duration: 0.3s;
   border: none;
 }
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.about-button {
+  font-size: 1.4rem;
+  line-height: 35px;
+  background-color: #f3e28b;
+  color: #374785;
+  background: linear-gradient(259.07deg, #f3e28b 4.07%, #fdf7da 100%);
+  box-shadow: 0px 8px 20px #faf6e5;
+  transition-duration: 0.1s;
+  cursor: pointer;
+  position: relative;
+  padding: 0.25em 3em;
+  vertical-align: middle;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+  text-align: center;
+  transition: all linear 0.3s;
+  transition-duration: 0.3s;
+  border: none;
 }
 
 .projects {
@@ -94,16 +106,28 @@ h2 {
 .nav-image {
   width: 40px;
   height: auto;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin: 2rem;
   align-items: center;
 }
-.About-background {
-   animation: 3s ease-out 0s 1 slideInFromRight;
-  background-image: url('./Components/Constants/pinkBackground.png');
-  height: 100vh;
-  margin-left: 25vw;
 
+.logo {
+  width: 80px;
+  height: auto;
+  margin: 2rem;
+}
+.about-background {
+   animation: 3s ease-out 0s 1 slideInFromRight;
+  background-image: url('./Components/Constants/iconsForNavBar/yellowWave.png');
+  height: 100vh;
+  /* margin-left: 25vw; */
+  background-size: cover;
+}
+.home-background {
+   animation: 3s ease-out 0s 1 slideInFromRight;
+  background-image: url('./Components/Constants/iconsForNavBar/blueWave.png');
+  height: 100vh;
+  /* margin-left: 25vw; */
+  background-size: cover;
 }
 
 @keyframes slideInFromRight {
@@ -114,11 +138,11 @@ h2 {
     transform: translateX(-0.1vw);
   }
 }
-.About img {
+.about img {
   width: 150px;
   height: auto;
 }
-.About-content {
+.about-content {
   position: fixed;
   top: 12vh;
   left: 10vw;
