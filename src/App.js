@@ -7,13 +7,15 @@ import {
   Route,
 } from "react-router-dom";
 
-function App() {
+class App extends React.Component {
+  render() {
+    console.log(window.location.pathname);
   return (
     <Router>
       <div className="App">
         <Nav />
         <Switch>
-          <Route path="/about">
+          <Route path="/about" >
             <About />
           </Route>
           <Route path="/projects">
@@ -26,6 +28,7 @@ function App() {
       </div>
     </Router>
   );
+  };
 };
 
 export default App;

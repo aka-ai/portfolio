@@ -1,6 +1,6 @@
 import React from "react";
 import Constants from "./Constants";
-import { useHistory } from 'react-router'
+import { useHistory } from "react-router";
 function About() {
   const { push } = useHistory()
   return (
