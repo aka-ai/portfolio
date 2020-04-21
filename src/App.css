@@ -117,14 +117,14 @@ h2 {
 }
 .about-background {
    animation: 3s ease-out 0s 1 slideInFromRight;
-  background-image: url('./Components/Constants/iconsForNavBar/yellowWave.png');
+  background-image: url('./Components/Constants/iconsAndBG/yellowWave.png');
   height: 100vh;
   /* margin-left: 25vw; */
   background-size: cover;
 }
 .home-background {
    animation: 3s ease-out 0s 1 slideInFromRight;
-  background-image: url('./Components/Constants/iconsForNavBar/blueWave.png');
+  background-image: url('./Components/Constants/iconsAndBG/blueWave.png');
   height: 100vh;
   /* margin-left: 25vw; */
   background-size: cover;
