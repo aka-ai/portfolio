@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Image from 'react-image'
-import { homeTheme, aboutTheme, projectsTheme } from "./Constants/iconsForNavBar"
+import { homeTheme, aboutTheme, projectsTheme } from "./Constants/iconsAndBG"
 import { withRouter } from "react-router-dom";
 class Nav extends React.Component {
 
