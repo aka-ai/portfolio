@@ -19,19 +19,15 @@ class Nav extends React.Component {
     const { logo, twitter, github, linkedIn } = this.getIcons()
     return (
       <div className="nav-bar">
-        <Link to="/">
-          <Image className="logo" src={logo} />
-        </Link>
         <div>
-          <a href="https://www.linkedin.com/in/akarach/" target="_blank">
-            <Image className="nav-image" src={linkedIn} />
-          </a>
-          <a href="https://github.com/aka-ai" target="_blank">
-            <Image className="nav-image" src={github} />
-          </a>
-          <a href="https://twitter.com/aicooks" target="_blank">
-            <Image className="nav-image" src={twitter} />
-          </a>
+          <Link to="/"><a>HOME</a></Link>
+          <Link to="/about"><a>ABOUT</a></Link>
+          <Link to="/projects"><a>PROJECTS</a></Link>
+        </div>
+        <div>
+          <a href="https://github.com/aka-ai" target="_blank">GITHUB</a>
+          <a href="https://www.linkedin.com/in/akarach/" target="_blank">LINKEDIN</a>
+          <a href="https://twitter.com/aicooks" target="_blank">TWITTER</a>
         </div>
       </div>
     )
