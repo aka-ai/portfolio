@@ -1,28 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Image from 'react-image'
-import { homeTheme, aboutTheme, projectsTheme } from "./Constants/iconsAndBG"
-import { withRouter } from "react-router-dom";
-class Nav extends React.Component {
+function Nav() {
 
-  getIcons() {
-    const path = this.props.location.pathname.slice(1)
-    if (path === "about") {
-      return aboutTheme
-    } else if (path === "projects") {
-      return projectsTheme
-    } else {
-      return homeTheme
-    }
-  }
-  render() {
-    const { logo, twitter, github, linkedIn } = this.getIcons()
     return (
       <div className="nav-bar">
         <div>
-          <Link to="/"><a>HOME</a></Link>
-          <Link to="/about"><a>ABOUT</a></Link>
-          <Link to="/projects"><a>PROJECTS</a></Link>
+          <Link to="/">HOME</Link>
+          <Link to="/about">ABOUT</Link>
+          <Link to="/projects">PROJECTS</Link>
         </div>
         <div>
           <a href="https://github.com/aka-ai" target="_blank">GITHUB</a>
@@ -31,7 +16,7 @@ class Nav extends React.Component {
         </div>
       </div>
     )
-  }
+
 }
 
-export default withRouter(Nav);
+export default Nav
