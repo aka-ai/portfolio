@@ -13,12 +13,38 @@ body {
   margin: 0;
   padding: 0;
 }
+p {
+  margin: 0;
+  padding: 0;
+}
 .home {
-  position: fixed;
-  top: 12vh;
-  left: 10vw;
-  width: 50vw;
-  /* animation: fadein 3s; */
+  display: flex;
+  flex-direction: column;
+  margin-top: 4vw;
+}
+.home-pitch {
+  font-family: 'Londrina Outline', cursive;
+  font-size: 5vw;
+  text-transform: uppercase;
+  text-align: left;
+  margin-left: 6vw;
+  /* line-height: 0.5vw; */
+}
+.home-motto {
+  /* font-family: 'Special Elite', cursive; */
+  /* font-family: "Open Sans Condensed", sans- serif; */
+  font-size: 1.5vw;
+  font-family: 'Averia Sans Libre', cursive;
+  margin: 0;
+  padding: 0;
+  text-align: start;
+}
+.home-middle-pitch {
+  display: flex;
+  flex-direction: row;
+  margin-left: 6vw;
+  align-items: baseline;
+  margin-left: 6vw;
 }
 h2 {
   font-family: Playfair Display, serif;
@@ -60,7 +86,7 @@ a {
   margin-top: 1.2vw;
   margin-left: 5vw;
   margin-right: 5vw;
-  line-height: 0.5vh; 
+  line-height: 3vh; 
   font-family: "Open Sans Condensed", sans- serif;
 }
 .logo {
