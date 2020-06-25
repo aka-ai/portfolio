@@ -5,8 +5,8 @@ body {
 }
 .App {
   white-space: pre-wrap;
-  text-align: center;
-  font-family: 'Nunito', sans-serif;;
+  /* text-align: center; */
+  font-family: 'Nunito', sans-serif;
   font-size: 1.6rem;
   font-size: calc(6px + 1.5vmin);
   height: 100vh;
@@ -98,15 +98,24 @@ a {
   line-height: 3vh; 
   font-family: "Open Sans Condensed", sans- serif;
 }
+.about {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Nunito', sans-serif;
+  margin-left: 10vw;
+  margin-right: 3vw;
 
-.about img {
-  width: 150px;
-  height: auto;
+}
+.profile-pic {
+  width: 30%;
+  border-radius: 15px;
+  filter: grayscale(100%);
+  align-self: center;
 }
 .about-content {
-  position: fixed;
-  top: 12vh;
-  left: 10vw;
-  width: 50vw;
+  margin: 5vw;
+}
+.peace-sign {
+  width: 8%
 }
 
