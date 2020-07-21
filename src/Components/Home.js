@@ -34,9 +34,6 @@ class Home extends Component {
             <p>I enjoy <span style={{ color: "deeppink" }}>cooking</span></p>
           </div>
         </div>
-        <div style={{marginTop: 0}}>
-          <Projects />
-        </div>
       </div>
     )
   }
