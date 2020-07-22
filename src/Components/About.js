@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Constants from "./Constants";
-import { render } from "@testing-library/react";
 class About extends Component {
   constructor() {
     super()
@@ -11,7 +10,6 @@ class About extends Component {
     this.setState({ hover: !this.state.hover })
   }
   render() {
-    let imgStyle = this.state.hover ? {filter: "contrast(120%)"} : {filter: "grayscale(100%)"}
     
     return (
       <div className="about">

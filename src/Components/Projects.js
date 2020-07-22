@@ -4,8 +4,6 @@ import { Spring, animated } from "react-spring/renderprops";
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import cottonCandy from './Constants/cottonCandy.png'
 const projects = constants.projects
-const projectImageStyle = { width: '40%', borderRadius: '5px' }
-const projectStyle = { display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0' }
 
 class Projects extends React.Component {
   constructor(props) {
@@ -22,7 +20,7 @@ class Projects extends React.Component {
         <Parallax ref={ref => (this.parallax = ref)} pages={4}>
           {cottonCandyBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
-              <img src={cottonCandy} style={el.imgStyle} />
+              <img src={cottonCandy} alt='cotton-candy' style={el.imgStyle} />
             </ParallaxLayer>
           ))}
 
@@ -50,7 +48,7 @@ class Projects extends React.Component {
                               opacity: opacity.interpolate(o => 1 - o), transform: transform,
                             }}
                           >
-                            <img src={projects[project].img} className='project-image' />
+                            <img src={projects[project].img} alt={project} className='project-image' />
                           </animated.div>
                           <animated.div
                             onClick={this.clickHandle}
