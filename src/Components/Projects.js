@@ -18,7 +18,7 @@ class Projects extends React.Component {
   }
   render() {
     return (
-      <div>
+      <React.Fragment>
         <Parallax ref={ref => (this.parallax = ref)} pages={4}>
           {cottonCandyBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
@@ -26,76 +26,54 @@ class Projects extends React.Component {
             </ParallaxLayer>
           ))}
 
-
-          <ParallaxLayer
-            offset={0}
-            speed={0.1}
-            // onClick={() => this.parallax.scrollTo(1)}
-            className='project'
-          >
-            <Spring
-              native
-              from={{ opacity: 1 }}
-              to={{ opacity: this.state.hover ? 1 : 0, transform: `perspective(600px) rotateX(${this.state.hover ? 180 : 0}deg)` }}
-            >
-              {({ opacity, transform }) => {
-                return (
-                  <React.Fragment >
-                    <animated.div
-                      onClick={this.clickHandle}
-                      className='project-image-container'
-                      style={{
-                        opacity: opacity.interpolate(o => 1 - o), transform: transform,
-                      }}
-                    >
-                      <img src={projects.coronavirus.img} className='project-image' />
-                    </animated.div>
-                    <animated.div
-                      onClick={this.clickHandle}
-                      className='project-image-container'
-                      style={{
-                        opacity,
-                        transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-                      }}
-                    >
-                      <div className='project-desc'>
-                        <p>222222kjofajko fkaojfoeajfkoa</p>
-                        <p>222222kjofajko fkaojfoeajfkoa</p>
-                        <p>222222kjofajko fkaojfoeajfkoa</p>
-                        <p>222222kjofajko fkaojfoeajfkoa</p>
-                        <p>222222kjofajko fkaojfoeajfkoa</p>
-                      </div>
-                    </animated.div>
-                  </React.Fragment>
-                )
-              }}
-            </Spring>
-          </ParallaxLayer>
-          <ParallaxLayer
-            offset={1}
-            speed={0.1}
-            // onClick={() => this.parallax.scrollTo(2)}
-            style={projectStyle}>
-            <img src={projects.wizardsOfCode.img} style={projectImageStyle} />
-          </ParallaxLayer>
-
-          <ParallaxLayer
-            offset={2}
-            speed={0.1}
-            // onClick={() => this.parallax.scrollTo(3)}
-            style={projectStyle}>
-            <img src={projects.bumbleBee.img} style={projectImageStyle} />
-          </ParallaxLayer>
-
-          <ParallaxLayer
-            offset={3}
-            speed={0.1}
-            // onClick={() => this.parallax.scrollTo(0)}
-            style={projectStyle}>
-            <img src={projects.aicooks.img} style={projectImageStyle} />
-          </ParallaxLayer>
+          {Object.keys(projects).map((project, idx) => {
+            return (
+              <React.Fragment key={idx}>
+                <ParallaxLayer
+                  offset={idx}
+                  speed={0.1}
+                  // onClick={() => this.parallax.scrollTo(idx+1)}
+                  className='project'
+                >
+                  <Spring
+                    native
+                    from={{ opacity: 1 }}
+                    to={{ opacity: this.state.hover ? 1 : 0, transform: `perspective(600px) rotateX(${this.state.hover ? 180 : 0}deg)` }}
+                  >
+                    {({ opacity, transform }) => {
+                      return (
+                        <React.Fragment >
+                          <animated.div
+                            onClick={this.clickHandle}
+                            className='project-image-container'
+                            style={{
+                              opacity: opacity.interpolate(o => 1 - o), transform: transform,
+                            }}
+                          >
+                            <img src={projects[project].img} className='project-image' />
+                          </animated.div>
+                          <animated.div
+                            onClick={this.clickHandle}
+                            className='project-image-container'
+                            style={{
+                              opacity,
+                              transform: transform.interpolate(t => `${t} rotateX(180deg)`),
+                            }}
+                          >
+                            <div className='project-desc'>
+                              <p>{projects[project].desc}</p>
+                            </div>
+                          </animated.div>
+                        </React.Fragment>
+                      )
+                    }}
+                  </Spring>
+                </ParallaxLayer>
+              </React.Fragment>
+            )
+          })}
         </Parallax>
-      </div>
+      </React.Fragment>
     )
   }
 };
