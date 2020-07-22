@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import constants from "./Constants";
-import { Spring, animated, interpolate } from "react-spring/renderprops";
+import { Spring, animated } from "react-spring/renderprops";
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import cottonCandy from './Constants/cottonCandy.png'
 const projects = constants.projects
 const projectImageStyle = { width: '40%', borderRadius: '5px' }
-const projectStyle = { display: 'flex', alignItems: 'center', justifyContent: 'center' }
+const projectStyle = { display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0' }
 
 class Projects extends React.Component {
   constructor(props) {
     super(props)
     this.state = { hover: false }
-    this.toggleHover = this.toggleHover.bind(this)
+    this.clickHandle = this.clickHandle.bind(this)
   }
-  toggleHover() {
+  clickHandle() {
     this.setState({ hover: !this.state.hover })
   }
   render() {
@@ -25,66 +25,56 @@ class Projects extends React.Component {
               <img src={cottonCandy} style={el.imgStyle} />
             </ParallaxLayer>
           ))}
+
+
           <ParallaxLayer
             offset={0}
             speed={0.1}
-            onClick={() => this.parallax.scrollTo(1)}
-            style={projectStyle}>
-            {/* <img onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} src={this.state.hover ? projects.coronavirus.test : projects.coronavirus.img} style={{ width: '40%', borderRadius: '5px' }} /> */}
-
-
-
-
-
+            // onClick={() => this.parallax.scrollTo(1)}
+            className='project'
+          >
             <Spring
               native
               from={{ opacity: 1 }}
               to={{ opacity: this.state.hover ? 1 : 0, transform: `perspective(600px) rotateX(${this.state.hover ? 180 : 0}deg)` }}
-              style={projectStyle}
-
             >
               {({ opacity, transform }) => {
                 return (
-                  <div
-                    onMouseEnter={this.toggleHover}
-                    onMouseLeave={this.toggleHover}>
+                  <React.Fragment >
                     <animated.div
-                      style={{ 
-                        opacity: opacity.interpolate(o => 1 - o), transform,
-                        position: 'absolute'
-
+                      onClick={this.clickHandle}
+                      className='project-image-container'
+                      style={{
+                        opacity: opacity.interpolate(o => 1 - o), transform: transform,
                       }}
                     >
-                      <img src={projects.coronavirus.img} style={projectImageStyle} />
+                      <img src={projects.coronavirus.img} className='project-image' />
                     </animated.div>
                     <animated.div
-                      style={{ 
-                        opacity, 
+                      onClick={this.clickHandle}
+                      className='project-image-container'
+                      style={{
+                        opacity,
                         transform: transform.interpolate(t => `${t} rotateX(180deg)`),
-                        position: 'absolute'
                       }}
                     >
-                      <p>222222kjofajko fkaojfoeajfkoa</p>
-                      <p>222222kjofajko fkaojfoeajfkoa</p>
-                      <p>222222kjofajko fkaojfoeajfkoa</p>
-                      <p>222222kjofajko fkaojfoeajfkoa</p>
-                      <p>222222kjofajko fkaojfoeajfkoa</p>
+                      <div className='project-desc'>
+                        <p>222222kjofajko fkaojfoeajfkoa</p>
+                        <p>222222kjofajko fkaojfoeajfkoa</p>
+                        <p>222222kjofajko fkaojfoeajfkoa</p>
+                        <p>222222kjofajko fkaojfoeajfkoa</p>
+                        <p>222222kjofajko fkaojfoeajfkoa</p>
+                      </div>
                     </animated.div>
-                  </div>
+                  </React.Fragment>
                 )
               }}
             </Spring>
-
-
-
-
-
-
           </ParallaxLayer>
           <ParallaxLayer
             offset={1}
             speed={0.1}
-            onClick={() => this.parallax.scrollTo(2)}
+            // onClick={() => this.parallax.scrollTo(2)}
             style={projectStyle}>
             <img src={projects.wizardsOfCode.img} style={projectImageStyle} />
           </ParallaxLayer>
@@ -92,7 +82,7 @@ class Projects extends React.Component {
           <ParallaxLayer
             offset={2}
             speed={0.1}
-            onClick={() => this.parallax.scrollTo(3)}
+            // onClick={() => this.parallax.scrollTo(3)}
             style={projectStyle}>
             <img src={projects.bumbleBee.img} style={projectImageStyle} />
           </ParallaxLayer>
@@ -100,7 +90,7 @@ class Projects extends React.Component {
           <ParallaxLayer
             offset={3}
             speed={0.1}
-            onClick={() => this.parallax.scrollTo(0)}
+            // onClick={() => this.parallax.scrollTo(0)}
             style={projectStyle}>
             <img src={projects.aicooks.img} style={projectImageStyle} />
           </ParallaxLayer>
@@ -116,6 +106,7 @@ export default Projects;
 //react-spring parellax example: https://codesandbox.io/s/nwq4j1j6lm?from-embed=&file=/src/index.js:843-856
 
 const cottonCandyBackground = [
+
   { offset: 0.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
   { offset: 0.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
   { offset: 0.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },

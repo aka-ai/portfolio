@@ -38,7 +38,7 @@ p {
   /* font-family: "Open Sans Condensed", sans- serif; */
   font-size: 1.5vw;
   /* font-family: 'Averia Sans Libre', cursive; */
-  font-family: "Open Sans Condensed", sans- serif;
+  font-family: 'Open Sans Condensed', sans- serif;
   margin: 0;
   padding: 0;
   text-align: start;
@@ -52,28 +52,28 @@ p {
 }
 .home-liesure {
   /* font-family: 'Averia Sans Libre', cursive; */
-  font-family: "Open Sans Condensed", sans- serif;
+  font-family: 'Open Sans Condensed', sans- serif;
   text-align: end;
   margin-right: 6vw;
 }
 h2 {
   font-family: Playfair Display, serif;
 }
-.projects-container {
+/* .projects-container {
   display: flex;
   flex-direction: column;
   margin-left: 5vw;
   margin-right: 5vw;
   margin-top: 5vw;
-}
-.projects-header {
+} */
+/* .projects-header {
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 3vw;
   text-transform: uppercase;
   text-align: left;
   margin-left: 2vw;
-}
-.project {
+} */
+/* .project {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -85,6 +85,38 @@ h2 {
 .project img {
   width: 20vw;
   height: auto;
+} */
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  left: 0;
+}
+.project-image-container {
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  will-change: 'transform, opacity';
+}
+
+.project-image-container:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}
+.project-image {
+  max-width: 1500px;
+  max-height: 1500px;
+  width: 35vw;
+  height: 35vw;
+}
+.project-desc {
+  max-width: 1500px;
+  max-height: 1500px;
+  width: 35vw;
+  height: 35vw;
 }
 
 .nav-bar {
@@ -111,8 +143,8 @@ a {
   margin-top: 1.2vw;
   margin-left: 5vw;
   margin-right: 5vw;
-  line-height: 3vh; 
-  font-family: "Open Sans Condensed", sans- serif;
+  line-height: 3vh;
+  font-family: 'Open Sans Condensed', sans- serif;
   text-align: center;
 }
 .about {
@@ -133,6 +165,5 @@ a {
   margin: 5vw;
 }
 .peace-sign {
-  width: 8%
+  width: 8%;
 }
-
