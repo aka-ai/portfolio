@@ -1,7 +1,7 @@
 import appLogo from "./aiLogo500white.png";
 import profilePic from "./profilePic.JPG";
 import peaceSign from "./peaceSign.png"
-import { coronavirus, wizardsOfCode, bumbleBee, aicooks } from "./projects";
+import { coronavirus, wizardsOfCode, bumbleBee, aicooks, test } from "./projects";
 const Constants = {
   brieflyAboutMe: `A fashion/chef turned software developer. I have an eye for design, a mind for learning and problem solving, and a hand for executing.`,
   workingStyle: ` I take pride of everything I do. I belive in striving for excellence.`,
@@ -14,7 +14,8 @@ const Constants = {
   projects: {
     coronavirus: {
       desc: `Is-it-Flat-Yet, a web app visualizing geospatial and historical Covid-19 data. My solo project, out of a curiosity about GoogleMaps API and wanting to dive deep into Firebase.\nTechnologies: Firebase Hosting, Cloud Firestore, Cloud Functions, React, GoogleMaps API, Node.js`,
-      img: coronavirus
+      img: coronavirus,
+      test: test
     },
     wizardsOfCode: {
       desc: `Wizards-of-Code, a webapp multiplayer game. My bootcamp capstone project, worked with a team of 4\nTechnologies: Firebase Hosting, Cloud Firestore, Cloud Functions, React, Web Workers, CSS Animation`,

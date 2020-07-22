@@ -1,54 +1,111 @@
-import React from "react";
-import constants from "./Constants"
+import React, { useState } from "react";
+import constants from "./Constants";
+import { Spring, animated, interpolate } from "react-spring/renderprops";
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import cottonCandy from './Constants/cottonCandy.png'
-import { wizardsOfCode } from "./Constants/projects";
 const projects = constants.projects
-const url = (name, wrap = false) => `${wrap ? 'url(' : ''}https://awv3node-homepage.surge.sh/build/assets/${name}.svg${wrap ? ')' : ''}`
 const projectImageStyle = { width: '40%', borderRadius: '5px' }
 const projectStyle = { display: 'flex', alignItems: 'center', justifyContent: 'center' }
 
 class Projects extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { hover: false }
+    this.toggleHover = this.toggleHover.bind(this)
+  }
+  toggleHover() {
+    this.setState({ hover: !this.state.hover })
+  }
   render() {
     return (
-      <Parallax ref={ref => (this.parallax = ref)} pages={4}>
-        {cottonCandyBackground.map((el, idx) => (
-          <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
-            <img src={cottonCandy} style={el.imgStyle} />
+      <div>
+        <Parallax ref={ref => (this.parallax = ref)} pages={4}>
+          {cottonCandyBackground.map((el, idx) => (
+            <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
+              <img src={cottonCandy} style={el.imgStyle} />
+            </ParallaxLayer>
+          ))}
+          <ParallaxLayer
+            offset={0}
+            speed={0.1}
+            onClick={() => this.parallax.scrollTo(1)}
+            style={projectStyle}>
+            {/* <img onMouseEnter={this.toggleHover} onMouseLeave={this.toggleHover} src={this.state.hover ? projects.coronavirus.test : projects.coronavirus.img} style={{ width: '40%', borderRadius: '5px' }} /> */}
+
+
+
+
+
+            <Spring
+              native
+              from={{ opacity: 1 }}
+              to={{ opacity: this.state.hover ? 1 : 0, transform: `perspective(600px) rotateX(${this.state.hover ? 180 : 0}deg)` }}
+              style={projectStyle}
+
+            >
+              {({ opacity, transform }) => {
+                return (
+                  <div
+                    onMouseEnter={this.toggleHover}
+                    onMouseLeave={this.toggleHover}>
+                    <animated.div
+                      style={{ 
+                        opacity: opacity.interpolate(o => 1 - o), transform,
+                        position: 'absolute'
+
+                      }}
+                    >
+                      <img src={projects.coronavirus.img} style={projectImageStyle} />
+                    </animated.div>
+                    <animated.div
+                      style={{ 
+                        opacity, 
+                        transform: transform.interpolate(t => `${t} rotateX(180deg)`),
+                        position: 'absolute'
+                      }}
+                    >
+                      <p>222222kjofajko fkaojfoeajfkoa</p>
+                      <p>222222kjofajko fkaojfoeajfkoa</p>
+                      <p>222222kjofajko fkaojfoeajfkoa</p>
+                      <p>222222kjofajko fkaojfoeajfkoa</p>
+                      <p>222222kjofajko fkaojfoeajfkoa</p>
+                    </animated.div>
+                  </div>
+                )
+              }}
+            </Spring>
+
+
+
+
+
+
           </ParallaxLayer>
-        ))}
-        <ParallaxLayer
-          offset={0}
-          speed={0.1}
-          onClick={() => this.parallax.scrollTo(1)}
-          style={projectStyle}>
-          <img src={projects.coronavirus.img} style={projectImageStyle} />
-        </ParallaxLayer>
+          <ParallaxLayer
+            offset={1}
+            speed={0.1}
+            onClick={() => this.parallax.scrollTo(2)}
+            style={projectStyle}>
+            <img src={projects.wizardsOfCode.img} style={projectImageStyle} />
+          </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={1}
-          speed={0.1}
-          onClick={() => this.parallax.scrollTo(2)}
-          style={projectStyle}>
-          <img src={projects.wizardsOfCode.img} style={projectImageStyle} />
-        </ParallaxLayer>
+          <ParallaxLayer
+            offset={2}
+            speed={0.1}
+            onClick={() => this.parallax.scrollTo(3)}
+            style={projectStyle}>
+            <img src={projects.bumbleBee.img} style={projectImageStyle} />
+          </ParallaxLayer>
 
-        <ParallaxLayer
-          offset={2}
-          speed={0.1}
-          onClick={() => this.parallax.scrollTo(3)}
-          style={projectStyle}>
-          <img src={projects.bumbleBee.img} style={projectImageStyle} />
-        </ParallaxLayer>
-
-        <ParallaxLayer
-          offset={3}
-          speed={0.1}
-          onClick={() => this.parallax.scrollTo(0)}
-          style={projectStyle}>
-          <img src={projects.aicooks.img} style={projectImageStyle} />
-        </ParallaxLayer>
-      </Parallax>
+          <ParallaxLayer
+            offset={3}
+            speed={0.1}
+            onClick={() => this.parallax.scrollTo(0)}
+            style={projectStyle}>
+            <img src={projects.aicooks.img} style={projectImageStyle} />
+          </ParallaxLayer>
+        </Parallax>
+      </div>
     )
   }
 };
