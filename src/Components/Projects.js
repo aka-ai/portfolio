@@ -4,6 +4,8 @@ import { Spring, animated } from "react-spring/renderprops";
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import cottonCandy from './Constants/cottonCandy.png'
 const projects = constants.projects
+const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
+const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 class Projects extends React.Component {
   constructor(props) {
@@ -17,7 +19,7 @@ class Projects extends React.Component {
     newstate[project] = !this.state[project]
     this.setState(newstate)
   }
-  scrollHandle() {
+  onMouseLeaveHandle() {
     console.log('scroll')
     this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false } )
   }
@@ -40,7 +42,6 @@ class Projects extends React.Component {
                   className='project'
                   >
                   <Spring
-                  onScroll={this.scrollHandle}
                     native
                     from={{ opacity: 1 }}
                     to={{ opacity: this.state[project] ? 1 : 0, transform: `perspective(600px) rotateX(${this.state[project] ? 180 : 0}deg)` }}
@@ -50,7 +51,7 @@ class Projects extends React.Component {
                         <React.Fragment >
                           <animated.div
                             onClick={() => this.clickHandle(project)}
-                            onMouseLeave={this.scrollHandle}
+                            onMouseLeave={this.onMouseLeaveHandle}
                             className='project-image-container'
                             style={{
                               opacity: opacity.interpolate(o => 1 - o), transform: transform,
@@ -60,7 +61,7 @@ class Projects extends React.Component {
                           </animated.div>
                           <animated.div
                             onClick={() => this.clickHandle(project)}
-                            onMouseLeave={this.scrollHandle}
+                            onMouseLeave={this.onMouseLeaveHandle}
                             className='project-image-container'
                             style={{
                               opacity,
