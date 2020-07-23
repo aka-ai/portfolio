@@ -94,8 +94,13 @@ h2 {
   min-height: 300px;
   width: 35vw;
   height: 35vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.project-desc p {
+  padding: 5vw;
+}
 .nav-bar {
   display: flex;
   justify-content: space-between;
