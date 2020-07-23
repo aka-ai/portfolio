@@ -8,13 +8,18 @@ const projects = constants.projects
 class Projects extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { click: { coronavirus: false, wizardsOfCode: false } }
+    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false} 
     this.clickHandle = this.clickHandle.bind(this)
+    this.scrollHandle = this.scrollHandle.bind(this)
   }
   clickHandle(project) {
     const newstate = this.state
-    newstate.click[project] = !this.state.click[project]
+    newstate[project] = !this.state[project]
     this.setState(newstate)
+  }
+  scrollHandle() {
+    console.log('scroll')
+    this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false } )
   }
   render() {
     return (
@@ -33,17 +38,19 @@ class Projects extends React.Component {
                   offset={idx}
                   speed={0.4}
                   className='project'
-                >
+                  >
                   <Spring
+                  onScroll={this.scrollHandle}
                     native
                     from={{ opacity: 1 }}
-                    to={{ opacity: this.state.click[project] ? 1 : 0, transform: `perspective(600px) rotateX(${this.state.click[project] ? 180 : 0}deg)` }}
-                  >
+                    to={{ opacity: this.state[project] ? 1 : 0, transform: `perspective(600px) rotateX(${this.state[project] ? 180 : 0}deg)` }}
+                    >
                     {({ opacity, transform }) => {
                       return (
                         <React.Fragment >
                           <animated.div
                             onClick={() => this.clickHandle(project)}
+                            onMouseLeave={this.scrollHandle}
                             className='project-image-container'
                             style={{
                               opacity: opacity.interpolate(o => 1 - o), transform: transform,
@@ -53,6 +60,7 @@ class Projects extends React.Component {
                           </animated.div>
                           <animated.div
                             onClick={() => this.clickHandle(project)}
+                            onMouseLeave={this.scrollHandle}
                             className='project-image-container'
                             style={{
                               opacity,
