@@ -12,7 +12,7 @@ class Projects extends React.Component {
     super(props)
     this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false} 
     this.clickHandle = this.clickHandle.bind(this)
-    this.scrollHandle = this.scrollHandle.bind(this)
+    this.onMouseLeaveHandle = this.onMouseLeaveHandle.bind(this)
   }
   clickHandle(project) {
     const newstate = this.state
