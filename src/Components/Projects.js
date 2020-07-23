@@ -29,7 +29,7 @@ class Projects extends React.Component {
               <React.Fragment key={idx}>
                 <ParallaxLayer
                   offset={idx}
-                  speed={0.1}
+                  speed={0.4}
                   // onClick={() => this.parallax.scrollTo(idx+1)}
                   className='project'
                 >

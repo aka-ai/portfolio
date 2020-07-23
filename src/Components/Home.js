@@ -11,7 +11,7 @@ class Home extends Component {
       <div>
         <div className="home" >
           <div className="home-pitch">
-            <p>I'm Ai, I'm a fashion</p>
+            <p>I'm Ai, a fashion</p>
             <p>designer/chef turned </p>
           </div>
           <div className="home-middle-pitch">

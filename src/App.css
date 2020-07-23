@@ -59,33 +59,6 @@ p {
 h2 {
   font-family: Playfair Display, serif;
 }
-/* .projects-container {
-  display: flex;
-  flex-direction: column;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-top: 5vw;
-} */
-/* .projects-header {
-  font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 3vw;
-  text-transform: uppercase;
-  text-align: left;
-  margin-left: 2vw;
-} */
-/* .project {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 80vw;
-  height: auto;
-  margin: 2%;
-}
-.project img {
-  width: 20vw;
-  height: auto;
-} */
 .project {
   display: flex;
   align-items: center;
@@ -109,12 +82,16 @@ h2 {
 .project-image {
   max-width: 1500px;
   max-height: 1500px;
+  min-width: 300px;
+  min-height: 300px;
   width: 35vw;
   height: 35vw;
 }
 .project-desc {
   max-width: 1500px;
   max-height: 1500px;
+  min-width: 300px;
+  min-height: 300px;
   width: 35vw;
   height: 35vw;
 }
@@ -123,9 +100,15 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 1.2vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
+  align-items: center;
+  box-shadow: 0px 10px 30px -25px rgba(0, 0, 0, 0.3);
+  position: fixed;
+  width: 100%;
+  background-color: #f0ede8;
+  padding-bottom: 1%;
+  z-index: 1;
+  top: 0;
+  opacity: 0.9;
 }
 a {
   text-decoration: none;
@@ -158,7 +141,6 @@ a {
 .profile-pic {
   width: 30%;
   border-radius: 15px;
-  /* filter: grayscale(100%); */
   align-self: center;
 }
 .about-content {
