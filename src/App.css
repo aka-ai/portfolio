@@ -84,16 +84,16 @@ h2 {
   max-height: 1500px;
   min-width: 300px;
   min-height: 300px;
-  width: 35vw;
-  height: 35vw;
+  width: 30vw;
+  height: 30vw;
 }
 .project-desc {
   max-width: 1500px;
   max-height: 1500px;
   min-width: 300px;
   min-height: 300px;
-  width: 35vw;
-  height: 35vw;
+  width: 30vw;
+  height: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;

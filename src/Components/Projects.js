@@ -8,11 +8,13 @@ const projects = constants.projects
 class Projects extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { hover: false }
+    this.state = { click: { coronavirus: false, wizardsOfCode: false } }
     this.clickHandle = this.clickHandle.bind(this)
   }
-  clickHandle() {
-    this.setState({ hover: !this.state.hover })
+  clickHandle(project) {
+    const newstate = this.state
+    newstate.click[project] = !this.state.click[project]
+    this.setState(newstate)
   }
   render() {
     return (
@@ -30,19 +32,18 @@ class Projects extends React.Component {
                 <ParallaxLayer
                   offset={idx}
                   speed={0.4}
-                  // onClick={() => this.parallax.scrollTo(idx+1)}
                   className='project'
                 >
                   <Spring
                     native
                     from={{ opacity: 1 }}
-                    to={{ opacity: this.state.hover ? 1 : 0, transform: `perspective(600px) rotateX(${this.state.hover ? 180 : 0}deg)` }}
+                    to={{ opacity: this.state.click[project] ? 1 : 0, transform: `perspective(600px) rotateX(${this.state.click[project] ? 180 : 0}deg)` }}
                   >
                     {({ opacity, transform }) => {
                       return (
                         <React.Fragment >
                           <animated.div
-                            onClick={this.clickHandle}
+                            onClick={() => this.clickHandle(project)}
                             className='project-image-container'
                             style={{
                               opacity: opacity.interpolate(o => 1 - o), transform: transform,
@@ -51,7 +52,7 @@ class Projects extends React.Component {
                             <img src={projects[project].img} alt={project} className='project-image' />
                           </animated.div>
                           <animated.div
-                            onClick={this.clickHandle}
+                            onClick={() => this.clickHandle(project)}
                             className='project-image-container'
                             style={{
                               opacity,
