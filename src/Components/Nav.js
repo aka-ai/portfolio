@@ -5,9 +5,9 @@ function Nav() {
     return (
       <div className="nav-bar">
         <div className="nav-section">
-          <Link to="/">HOME</Link>
-          <Link to="/about">ABOUT</Link>
-          <Link to="/projects">PROJECTS</Link>
+          <Link className="inhouse-link" to="/">HOME</Link>
+          <Link className="inhouse-link" to="/about">ABOUT</Link>
+          <Link className="inhouse-link" to="/projects">PROJECTS</Link>
         </div>
         <div className="nav-name">
           <p>AI</p>

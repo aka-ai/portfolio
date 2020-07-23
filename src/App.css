@@ -24,20 +24,14 @@ p {
   width: auto;
 }
 .home-pitch {
-  /* font-family: 'Londrina Outline', cursive; */
-  /* font-size: 5vw; */
   font-family: 'Love Ya Like A Sister', cursive;
   font-size: 4vw;
   text-transform: uppercase;
   text-align: left;
   margin-left: 6vw;
-  /* line-height: 0.5vw; */
 }
 .home-motto {
-  /* font-family: 'Special Elite', cursive; */
-  /* font-family: "Open Sans Condensed", sans- serif; */
   font-size: 1.5vw;
-  /* font-family: 'Averia Sans Libre', cursive; */
   font-family: 'Open Sans Condensed', sans- serif;
   margin: 0;
   padding: 0;
@@ -51,7 +45,6 @@ p {
   margin-left: 6vw;
 }
 .home-liesure {
-  /* font-family: 'Averia Sans Libre', cursive; */
   font-family: 'Open Sans Condensed', sans- serif;
   text-align: end;
   margin-right: 6vw;
@@ -121,6 +114,21 @@ a {
   color: #707070;
   font-size: 0.86vw;
   font-weight: 645;
+}
+a:hover {
+  color: deeppink;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.inhouse-link:focus,
+.inhouse-link:active {
+  color: deeppink;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
 }
 .nav-section {
   margin-top: 1.2vw;
