@@ -1,10 +1,18 @@
 import React, { Component } from "react";
-
+import List from './List'
+import data from './Data'
+import shuffle from 'lodash/shuffle'
 
 class Home extends Component {
   constructor() {
     super()
     this.leisures = ["home cooking", "online shopping", "exploring different cultures", "deep conversation", "wild fermented cider", "baking bread"]
+    this.state = {data}
+    this.shuffle = this.shuffle.bind(this)
+  }
+  shuffle = () => this.setState(state => ({ data: shuffle(state.data)}))
+  componentDidMount() {
+    setInterval(this.shuffle, 3000)
   }
   render() {
     return (
@@ -29,8 +37,22 @@ class Home extends Component {
             <p>and strive for excellence.</p>
           </div>
           <div className="home-liesure">
-            <p>I enjoy <span style={{ color: "deeppink" }}>cooking</span></p>
+            <p>I enjoy</p>
           </div>
+        <List
+          className="list"
+          items={this.state.data}
+          keys={d => d.name}
+          heights={d => d.height}
+          config={{ mass: 4, tension: 100, friction: 40 }}>
+          {item => (
+              <div
+              style={{ color: 'deeppink', marginRight: '2vw' }}>
+                <p>{item.name}</p>
+              </div>
+          )}
+        </List>
+
         </div>
     )
   }
@@ -38,3 +60,4 @@ class Home extends Component {
 
 
 export default Home;
+//source: https://github.com/react-spring/react-spring-examples/tree/renderprops/demos/renderprops/list

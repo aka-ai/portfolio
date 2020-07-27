@@ -17,9 +17,7 @@ p {
   padding: 0;
 }
 .home {
-  display: flex;
-  flex-direction: column;
-  margin-top: 8vw;
+  margin-top: 15vh;
 }
 .home-pitch {
   font-family: 'Love Ya Like A Sister', cursive;
@@ -45,7 +43,13 @@ p {
 .home-liesure {
   font-family: 'Open Sans Condensed', sans- serif;
   text-align: end;
-  margin-right: 6vw;
+  top: 10vh;
+  margin-right: 2vw;
+  margin-top: 10%;
+}
+.list {
+  font-family: 'Open Sans Condensed', sans- serif;
+  text-align: end;
 }
 h2 {
   font-family: Playfair Display, serif;
