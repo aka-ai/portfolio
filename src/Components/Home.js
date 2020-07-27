@@ -8,7 +8,6 @@ class Home extends Component {
   }
   render() {
     return (
-      <div>
         <div className="home" >
           <div className="home-pitch">
             <p>I'm Ai, a fashion</p>
@@ -33,7 +32,6 @@ class Home extends Component {
             <p>I enjoy <span style={{ color: "deeppink" }}>cooking</span></p>
           </div>
         </div>
-      </div>
     )
   }
 }

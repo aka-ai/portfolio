@@ -1,7 +1,7 @@
 body {
   background-color: #f0ede8;
   max-width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .App {
   white-space: pre-wrap;
@@ -20,8 +20,6 @@ p {
   display: flex;
   flex-direction: column;
   margin-top: 8vw;
-  height: 80vh;
-  width: auto;
 }
 .home-pitch {
   font-family: 'Love Ya Like A Sister', cursive;
