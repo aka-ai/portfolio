@@ -4,8 +4,6 @@ import { Spring, animated } from "react-spring/renderprops";
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import cottonCandy from './Constants/cottonCandy.png'
 const projects = constants.projects
-const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWidth / 2) / 20, 1.1]
-const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 class Projects extends React.Component {
   constructor(props) {
@@ -20,7 +18,6 @@ class Projects extends React.Component {
     this.setState(newstate)
   }
   onMouseLeaveHandle() {
-    console.log('scroll')
     this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false } )
   }
   render() {

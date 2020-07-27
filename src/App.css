@@ -65,8 +65,16 @@ h2 {
   position: absolute;
   cursor: pointer;
   box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
-  border-radius: 5px;
+  background-color: transparent;
   will-change: 'transform, opacity';
+  max-width: 1500px;
+  max-height: 1500px;
+  min-width: 300px;
+  min-height: 300px;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 10px;
+
 }
 
 .project-image-container:hover {
@@ -79,6 +87,7 @@ h2 {
   min-height: 300px;
   width: 30vw;
   height: 30vw;
+  border-radius: 10px;
 }
 .project-desc {
   max-width: 1500px;
@@ -90,6 +99,8 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+
 }
 .project-desc p {
   padding: 5vw;
@@ -118,16 +129,6 @@ a {
 a:hover {
   color: deeppink;
   background-color: transparent;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  box-shadow: none;
-}
-.inhouse-link:focus,
-.inhouse-link:active {
-  color: deeppink;
-  background-color: transparent;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
 }
 .nav-section {

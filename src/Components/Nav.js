@@ -1,13 +1,28 @@
 import React from "react";
 import { Link } from "react-router-dom";
-function Nav() {
+class Nav extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { click: null }
+    this.handleClick = this.handleClick.bind(this)
+  }
+  handleClick(path) {
+    this.setState({ click: path })
+  }
 
+  render() {
+    const clickedStyle = {
+      color: 'deeppink',
+      backgroundColor: 'transparent',
+      boxShadow: 'none',
+    }
+    const clicked = this.state.click
     return (
       <div className="nav-bar">
         <div className="nav-section">
-          <Link className="inhouse-link" to="/">HOME</Link>
-          <Link className="inhouse-link" to="/about">ABOUT</Link>
-          <Link className="inhouse-link" to="/projects">PROJECTS</Link>
+          <Link style={clicked === 'home' ? clickedStyle : {}} onClick={()=>this.handleClick('home')} to="/">HOME</Link>
+          <Link style={clicked === 'about' ? clickedStyle : {}} onClick={() => this.handleClick('about')} to="/about">ABOUT</Link>
+          <Link onClick={() => this.handleClick('projects')} style={clicked === 'projects' ? clickedStyle : {}} to="/projects">PROJECTS</Link>
         </div>
         <div className="nav-name">
           <p>AI</p>
@@ -20,6 +35,7 @@ function Nav() {
         </div>
       </div>
     )
+  }
 
 }
 
