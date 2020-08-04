@@ -4,12 +4,13 @@ import { Transition, animated } from 'react-spring/renderprops'
 
 const styles = {
   outer: { 
-    // position: 'relative', width: '100%', height: '100%' 
+    width: '100%', height: '100%', position: 'absolute',
+    top: '88vh', right: '1vh'
   },
   cell: {
     position: 'absolute',
     willChange: 'transform, height, opacity',
-    width: '100%',
+    width: '100%'
   },
 }
 
@@ -31,7 +32,7 @@ export default class List extends React.Component {
       return { y, height, key: keys(child), child }
     })
     return (
-      <div style={{ ...styles.outer, height: totalHeight }} {...rest}>
+      <div style={{ ...styles.outer, height: totalHeight}} {...rest}>
         <Transition
           native
           items={displayData}

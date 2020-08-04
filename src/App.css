@@ -8,48 +8,48 @@ body {
   font-family: 'Nunito', sans-serif;
   font-size: 1.6rem;
   font-size: calc(6px + 1.5vmin);
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-}
-p {
   margin: 0;
   padding: 0;
 }
 .home {
-  margin-top: 15vh;
+  max-height: 700px;
+  padding: 150px 2vh;
+  min-height: 600px;
+}
+p,
+.home-main-text {
+  margin: 0;
+  padding: 0;
 }
 .home-pitch {
   font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 4vw;
+  font-size: 5vh;
   text-transform: uppercase;
   text-align: left;
-  margin-left: 6vw;
+  margin-left: 4vh;
+  line-height: 6vh;
 }
 .home-motto {
-  font-size: 1.5vw;
+  font-size: 3vh;
   font-family: 'Open Sans Condensed', sans- serif;
-  margin: 0;
-  padding: 0;
-  text-align: start;
 }
 .home-middle-pitch {
   display: flex;
   flex-direction: row;
-  margin-left: 6vw;
-  align-items: baseline;
-  margin-left: 6vw;
+  margin-left: 6vh;
+  margin-left: 6vh;
 }
 .home-liesure {
   font-family: 'Open Sans Condensed', sans- serif;
-  text-align: end;
-  top: 10vh;
-  margin-right: 2vw;
-  margin-top: 10%;
+  top: 85vh;
+  position: absolute;
+  right: 3vh;
+  font-size: 2vh;
 }
 .list {
   font-family: 'Open Sans Condensed', sans- serif;
   text-align: end;
+  font-size: 1.7vh;
 }
 h2 {
   font-family: Playfair Display, serif;
@@ -76,7 +76,6 @@ h2 {
   width: 30vw;
   height: 30vw;
   border-radius: 10px;
-
 }
 
 .project-image-container:hover {
@@ -102,7 +101,6 @@ h2 {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-
 }
 .project-desc p {
   padding: 5vw;
