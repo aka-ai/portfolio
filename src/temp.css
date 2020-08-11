@@ -1,3 +1,6 @@
+/* this is the version before trying "Mobile First" approach */
+
+
 body {
   background-color: #f0ede8;
   max-width: 100%;
@@ -8,13 +11,19 @@ body {
   font-family: 'Nunito', sans-serif;
   font-size: 1.6rem;
   font-size: calc(6px + 1.5vmin);
-  margin: 0;
-  padding: 0;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: space-between; */
 }
 .home {
   max-height: 700px;
-  padding: 150px 2vh;
+  padding-top: 27vh;
   min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 p,
 .home-main-text {
@@ -23,33 +32,33 @@ p,
 }
 .home-pitch {
   font-family: 'Love Ya Like A Sister', cursive;
-  font-size: 5vh;
+  font-size: 5vw;
   text-transform: uppercase;
   text-align: left;
-  margin-left: 4vh;
-  line-height: 6vh;
+  margin-left: 4vw;
+  line-height: 6vw;
 }
 .home-motto {
-  font-size: 3vh;
+  font-size: 3vw;
   font-family: 'Open Sans Condensed', sans- serif;
 }
 .home-middle-pitch {
   display: flex;
   flex-direction: row;
-  margin-left: 6vh;
-  margin-left: 6vh;
+  margin-left: 6vw;
+  margin-left: 6vw;
 }
-.home-liesure {
+.things-i-enjoy {
   font-family: 'Open Sans Condensed', sans- serif;
-  top: 85vh;
-  position: absolute;
-  right: 3vh;
-  font-size: 2vh;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 1.8vw;
 }
 .list {
   font-family: 'Open Sans Condensed', sans- serif;
   text-align: end;
-  font-size: 1.7vh;
+  font-size: 1.7vw;
+  height: 25vh;
 }
 h2 {
   font-family: Playfair Display, serif;
@@ -111,7 +120,7 @@ h2 {
   flex-direction: row;
   align-items: center;
   box-shadow: 0px 10px 30px -25px rgba(0, 0, 0, 0.3);
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   background-color: #f0ede8;
   padding-bottom: 1%;

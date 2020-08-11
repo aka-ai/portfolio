@@ -4,13 +4,12 @@ import { Transition, animated } from 'react-spring/renderprops'
 
 const styles = {
   outer: { 
-    width: '100%', height: '100%', position: 'absolute',
-    top: '88vh', right: '1vh'
+    width: '100%', height: '100%', position: 'absolute'
   },
   cell: {
     position: 'absolute',
     willChange: 'transform, height, opacity',
-    width: '100%'
+    width: '100%',
   },
 }
 

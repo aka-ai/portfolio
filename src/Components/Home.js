@@ -38,7 +38,8 @@ class Home extends Component {
             <p>and strive for excellence.</p>
           </div>
         </div>
-        <div className="home-liesure">
+        <div className="home-leisure">
+        <div className="things-i-enjoy">
           <p>Things I enjoy...</p>
         </div>
         <List
@@ -46,6 +47,7 @@ class Home extends Component {
           items={this.state.data}
           keys={d => d.name}
           heights={d => d.height}
+          style={{position: 'relative'}}
           config={{ mass: 4, tension: 100, friction: 40 }}>
           {item => (
             <div
@@ -54,6 +56,7 @@ class Home extends Component {
             </div>
           )}
         </List>
+        </div>
       </div>
     )
   }
