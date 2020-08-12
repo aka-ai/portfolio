@@ -49,7 +49,6 @@ class Home extends Component {
           style={{position: 'relative'}}
           config={{ mass: 4, tension: 100, friction: 40 }}>
           {item => {
-              console.log(item)
               if (item.name === this.state.data[0].name) {
                 return (<div
                 style={{ color: 'deeppink', marginRight: '2vw' }}>
