@@ -12,7 +12,7 @@ class Home extends Component {
   }
   shuffle = () => this.setState(state => ({ data: shuffle(state.data) }))
   componentDidMount() {
-    setInterval(this.shuffle, 3000)
+    setInterval(this.shuffle, 2000)
   }
   render() {
     return (
@@ -25,16 +25,15 @@ class Home extends Component {
           <div className="home-middle-pitch">
             <div className="home-motto">
               <p>I believe in developing</p>
-              <p>a growth mindset</p>
-              <p>and always be learning.</p>
+              <p>a growth mindset and</p>
+              <p>practicing continuous learning.</p>
             </div>
             <div className="home-pitch">
               <p>software <span style={{ color: "deeppink" }}>developer</span>.</p>
-              <p>I have an eye for design,</p>
             </div>
           </div>
           <div className="home-pitch">
-            <p>I take pride of my work</p>
+            <p>I take pride in my work</p>
             <p>and strive for excellence.</p>
           </div>
         </div>
@@ -49,12 +48,17 @@ class Home extends Component {
           heights={d => d.height}
           style={{position: 'relative'}}
           config={{ mass: 4, tension: 100, friction: 40 }}>
-          {item => (
-            <div
-              style={{ color: 'deeppink', marginRight: '2vw' }}>
-              <p>{item.name}</p>
-            </div>
-          )}
+          {item => {
+              console.log(item)
+              if (item.name === this.state.data[0].name) {
+                return (<div
+                style={{ color: 'deeppink', marginRight: '2vw' }}>
+                <p>{item.name}</p>
+              </div>
+            )
+              }
+
+            }} 
         </List>
         </div>
       </div>

@@ -27,7 +27,7 @@ export default class List extends React.Component {
     let displayData = items.map(child => {
       let y = totalHeight
       let height = typeof heights === 'function' ? heights(child) : heights
-      totalHeight += height
+      totalHeight = height
       return { y, height, key: keys(child), child }
     })
     return (
