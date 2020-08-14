@@ -36,7 +36,6 @@ class Home extends Component {
               <div style={{ color: "deeppink" }}>
                 <p>developer</p>
               </div>
-              {/* <p>software <span style={{ color: "deeppink" }}>developer</span>.</p> */}
             </div>
           </div>
           <div className="home-pitch">
