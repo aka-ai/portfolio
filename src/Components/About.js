@@ -20,7 +20,7 @@ class About extends Component {
             <span style={{ fontFamily: "Open Sans Condensed, sans- serif", fontSize: "20px", color: "deeppink" }}>who I am.</span></p>
           <p style={{ marginTop: "10px"}}>{Constants.aboutMe}</p>
           <br></br>
-          <p style={{ fontFamily: "Open Sans Condensed, sans- serif", fontSize: "25px"}}>Feel free to reach out wheather it be about some typos, color and font decision or just want to learn more about me 🕊</p>
+          <p className="about-last">Feel free to reach out wheather it be about some typos, color and font decision or just want to learn more about me 🕊</p>
         </div>
       </div>
     )

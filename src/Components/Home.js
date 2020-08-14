@@ -6,13 +6,20 @@ import shuffle from 'lodash/shuffle'
 class Home extends Component {
   constructor() {
     super()
-    this.leisures = ["home cooking", "online shopping", "exploring different cultures", "deep conversation", "wild fermented cider", "baking bread"]
-    this.state = { data }
+    this.state = { data, intervalActive: null }
     this.shuffle = this.shuffle.bind(this)
   }
   shuffle = () => this.setState(state => ({ data: shuffle(state.data) }))
+  i() { 
+    this.setState({
+      intervalActive: setInterval(this.shuffle, 2000)
+    })
+  }
   componentDidMount() {
-    setInterval(this.shuffle, 2000)
+    this.i()
+  }
+  componentWillUnmount() {
+    clearInterval(this.state.intervalActive)
   }
   render() {
     return (

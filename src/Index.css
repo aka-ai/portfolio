@@ -163,7 +163,7 @@ a:hover {
   margin-left: 10px;
 }
 .profile-pic {
-  width: 30%;
+  width: 30vw;
   border-radius: 15px;
   align-self: center;
 }
@@ -172,6 +172,9 @@ a:hover {
 }
 .peace-sign {
   width: 8%;
+}
+.about-last {
+  font-family: 'Amatic SC', cursive;
 }
 
 /* landscape screen */
