@@ -40,7 +40,6 @@ p {
   margin: 0;
   padding: 0;
 }
-
 .home-middle-pitch {
   display: flex;
   flex-direction: column-reverse;
@@ -50,10 +49,6 @@ p {
 .home-developer {
   display: flex;
   flex-direction: row;
-}
-
-.home-leisure {
-  padding-bottom: 20vh;
 }
 .things-i-enjoy {
   font-family: 'Amatic SC', cursive;
@@ -197,89 +192,100 @@ a:hover {
     margin-top: 0px;
   }
 }
-
-/* medium to large desktop */
-@media only screen and (min-width: 1200px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 400px) {
   .home {
-    /* height: 50vh; */
+    height: 90vh;
+    max-height: 550px;
     left: 12vw;
     right: 7vw;
-    top: 12vw;
+    top: 18vh;
+    padding: 0;
+  }
+  .home-main-text {
+    margin-left: 5vw;
   }
   .home-pitch,
   .home-developer {
-    font-size: 50px;
-    line-height: 70px;
+    font-size: 30px;
+    line-height: 45px;
   }
   .home-motto {
     font-size: 35px;
-    line-height: 36px;
+    line-height: 40px;
+    letter-spacing: 2px
   }
   .things-i-enjoy {
-    margin-top: 0px;
-    font-size: 30px;
+    font-size: 25px;
     margin-right: 2vw;
   }
-  .home-leisure {
-    padding-bottom: 10vh;
-  }
   .list {
-    font-size: 30px;
+    font-size: 25px;
   }
   .home-middle-pitch {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     margin: 0;
     padding: 0;
   }
   .home-developer {
-    flex-direction: column;
-    margin-left: 2vw;
-  }
-  a {
-    font-size: 1rem;
-  }
-}
-/* small desktop */
-@media only screen and (min-width: 992px) {
-.home {
-    height: 80vh;
-    left: 12vw;
-    right: 7vw;
-    top: 12vw;
-    padding: 0;
-  }
-  .home-pitch,
-  .home-developer {
-    font-size: 50px;
-    line-height: 70px;
-  }
-  .home-motto {
-    font-size: 35px;
-    line-height: 36px;
-  }
-  .things-i-enjoy {
-    margin-top: 0px;
-    font-size: 30px;
-    margin-right: 1vw;
-  }
-  .home-leisure {
-    padding-bottom: 10vh;
-  }
-  .list {
-    font-size: 30px;
-  }
-  .home-middle-pitch {
-    display: flex;
     flex-direction: row;
-    margin: 0;
-    padding: 0;
-  }
-  .home-developer {
-    flex-direction: column;
-    margin-left: 2vw;
   }
   a {
     font-size: 0.7rem;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .home {
+    height: 80vh;
+    max-height: 600px;
+  }
+  .home-pitch,
+  .home-developer {
+    font-size: 40px;
+    line-height: 62px;
+  }
+  .home-motto {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  .home-middle-pitch {
+    flex-direction: row;
+  }
+  .home-developer {
+    flex-direction: column;
+    margin-left: 2vw;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up)  */
+@media only screen and (min-width: 992px) {
+  .home {
+    top: 15vw;
+  }
+  .home-pitch,
+  .home-developer {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .home-motto {
+    font-size: 35px;
+    line-height: 36px;
+  }
+  .things-i-enjoy {
+    font-size: 30px;
+    margin-right: 1vw;
+  }
+  .list {
+    font-size: 30px;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .things-i-enjoy {
+    margin-right: 2vw;
+  }
+  a {
+    font-size: 0.8rem;
   }
 }
