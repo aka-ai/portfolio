@@ -20,16 +20,23 @@ class Home extends Component {
         <div className="home-main-text" >
           <div className="home-pitch">
             <p>I'm Ai, a fashion</p>
-            <p>designer/chef turned </p>
+            <p>designer/chef turned</p>
           </div>
           <div className="home-middle-pitch">
             <div className="home-motto">
               <p>I believe in developing</p>
-              <p>a growth mindset and</p>
-              <p>practicing continuous learning.</p>
+              <p>a growth mindset</p>
+              <p>and practicing</p>
+              <p>continuous learning.</p>
             </div>
-            <div className="home-pitch">
-              <p>software <span style={{ color: "deeppink" }}>developer</span>.</p>
+            <div className="home-developer">
+              <div>
+                <p>software&nbsp;</p>
+              </div>
+              <div style={{ color: "deeppink" }}>
+                <p>developer</p>
+              </div>
+              {/* <p>software <span style={{ color: "deeppink" }}>developer</span>.</p> */}
             </div>
           </div>
           <div className="home-pitch">
