@@ -129,6 +129,7 @@ h2 {
   margin-top: 1vh;
   margin-left: 2%;
   margin-right: 2%;
+  height: 6vh;
 }
 a {
   text-decoration: none;
@@ -156,25 +157,36 @@ a:hover {
 .about {
   display: flex;
   flex-direction: column;
-  font-family: 'Nunito', sans-serif;
-  font-size: 15px;
-  line-height: 1.5rem;
-  margin-top: 60px;
-  margin-left: 10px;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans Condensed', sans- serif; 
+  font-size: 13px;
+  line-height: 1.2rem;
+  height: 90vh;
 }
 .profile-pic {
   width: 30vw;
   border-radius: 15px;
+}
+.profile-pic-container {
   align-self: center;
 }
 .about-content {
   margin: 5vw;
+}
+.who-i-am {
+  /* font-family: 'Open Sans Condensed', sans- serif; */
+  font-family: 'Amatic SC', cursive;
+  font-size: 20px;
+  color: deeppink;
 }
 .peace-sign {
   width: 8%;
 }
 .about-last {
   font-family: 'Amatic SC', cursive;
+  font-weight: 500;
+  font-size: 20px;
 }
 
 /* landscape screen */
@@ -193,6 +205,11 @@ a:hover {
   }
   .things-i-enjoy {
     margin-top: 0px;
+  }
+  .about {
+    flex-direction: row;
+    margin: 2vh;
+    /* height: 80vh; */
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */

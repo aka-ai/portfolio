@@ -10,17 +10,23 @@ class About extends Component {
     this.setState({ hover: !this.state.hover })
   }
   render() {
-    
+
     return (
       <div className="about">
-        <img className="profile-pic" src={Constants.profilePic} alt="profile-pic" />
+        <div className="profile-pic-container">
+          <img className="profile-pic" src={Constants.profilePic} alt="profile-pic" />
+        </div>
         <div className="about-content">
-          <p style={{ marginTop: "20px" }}>
+          <p>
             <span>A little bit about </span >
-            <span style={{ fontFamily: "Open Sans Condensed, sans- serif", fontSize: "20px", color: "deeppink" }}>who I am.</span></p>
-          <p style={{ marginTop: "10px"}}>{Constants.aboutMe}</p>
+            <span className="who-i-am">who I am.</span>
+          </p>
           <br></br>
-          <p className="about-last">Feel free to reach out wheather it be about some typos, color and font decision or just want to learn more about me 🕊</p>
+          <p>{Constants.aboutMe}</p>
+          <br></br>
+          <p className="about-last">
+            Feel free to reach out wheather it be about some typos, color and font decision or just want to learn more about me 🕊
+            </p>
         </div>
       </div>
     )
