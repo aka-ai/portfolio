@@ -160,8 +160,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   font-family: 'Open Sans Condensed', sans- serif;
-  font-size: 4vw;
-  line-height: 6vw;
+  font-size: 2vh;
+  line-height: 3vh;
   padding: 70px 0;
 }
 .profile-pic {
@@ -176,7 +176,7 @@ a:hover {
 }
 .who-i-am {
   font-family: 'Amatic SC', cursive;
-  font-size: 5vw;
+  font-size: 2vh;
   color: deeppink;
 }
 .peace-sign {
@@ -185,11 +185,11 @@ a:hover {
 .about-last {
   font-family: 'Amatic SC', cursive;
   font-weight: 500;
-  font-size: 4vw;
+  font-size: 2vh;
 }
 
 /* landscape screen */
-@media only screen and (orientation: landscape) {
+@media only screen and (max-width: 768px) and (orientation: landscape) {
   .home {
     height: 35vw;
     left: 40vh;
@@ -320,6 +320,15 @@ a:hover {
   }
   .list {
     font-size: 30px;
+  }
+  .about {
+    font-size: 2.5vh;
+    padding: 3vh 0;
+    line-height: 3.8vh;
+  }
+  .about-last,
+  .who-i-am {
+    font-size: 2.8vh;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
