@@ -212,7 +212,7 @@ a:hover {
     flex-direction: row;
     font-size: 17px;
     line-height: 5vh;
-    padding: 11px 0;
+    padding: 0px 0;
     margin-left: 10px;
   }
   .about-last,
@@ -263,18 +263,18 @@ a:hover {
     font-size: 0.7rem;
   }
   .profile-pic {
-    width: 40vw;
+    width: 30vw;
   }
   .about {
-    font-size: 5vw;
-    line-height: 6vw;
-    margin-top: 20px;
-    overflow: auto;
-    /* height: 80vh; */
+    font-size: 2.5vh;
+    line-height: 3vh;
+    margin-top: 10vh;
+    padding: 0;
   }
   .about-last,
   .who-i-am {
-    font-size: 5vw;
+    font-size: 3vh;
+    line-height: 3vh;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
