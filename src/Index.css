@@ -161,8 +161,8 @@ a:hover {
   align-items: center;
   font-family: 'Open Sans Condensed', sans- serif;
   font-size: 4vw;
-  line-height: 5vw;
-  height: 90vh;
+  line-height: 6vw;
+  padding: 70px 0;
 }
 .profile-pic {
   width: 30vw;
@@ -172,11 +172,11 @@ a:hover {
   align-self: center;
 }
 .about-content {
-  margin: 5vw;
+  margin: 6vw;
 }
 .who-i-am {
   font-family: 'Amatic SC', cursive;
-  font-size: 4vw;
+  font-size: 5vw;
   color: deeppink;
 }
 .peace-sign {
@@ -205,11 +205,15 @@ a:hover {
   .things-i-enjoy {
     margin-top: 0px;
   }
+  .profile-pic {
+    width: 40vh;
+  }
   .about {
     flex-direction: row;
-    margin: 2vh;
-    font-size: 2.2vw;
-    line-height: 3vw;
+    font-size: 17px;
+    line-height: 5vh;
+    padding: 11px 0;
+    margin-left: 10px;
   }
   .about-last,
   .who-i-am {
@@ -217,7 +221,7 @@ a:hover {
   }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 400px) and (orientation: portrait) {
   .home {
     height: 90vh;
     max-height: 550px;
@@ -264,6 +268,9 @@ a:hover {
   .about {
     font-size: 5vw;
     line-height: 6vw;
+    margin-top: 20px;
+    overflow: auto;
+    /* height: 80vh; */
   }
   .about-last,
   .who-i-am {
