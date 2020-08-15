@@ -299,6 +299,17 @@ a:hover {
     flex-direction: column;
     margin-left: 2vw;
   }
+  .about {
+    font-size: 2.5vh;
+    line-height: 3.8vh;
+  }
+  .profile-pic {
+    width: 25vw;
+  }
+  .about-last,
+  .who-i-am {
+    font-size: 2.8vh;
+  }
 }
 /* Large devices (laptops/desktops, 992px and up)  */
 @media only screen and (min-width: 992px) {
@@ -321,15 +332,6 @@ a:hover {
   .list {
     font-size: 30px;
   }
-  .about {
-    font-size: 2.5vh;
-    padding: 3vh 0;
-    line-height: 3.8vh;
-  }
-  .about-last,
-  .who-i-am {
-    font-size: 2.8vh;
-  }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
@@ -338,5 +340,18 @@ a:hover {
   }
   a {
     font-size: 0.8rem;
+  }
+  .about {
+    flex-direction: row;
+    font-size: 3vh;
+    padding: 5vh 15vw;
+    line-height: 3.8vh;
+  }
+  .profile-pic {
+    width: 20vw;
+  }
+  .about-last,
+  .who-i-am {
+    font-size: 3vh;
   }
 }
