@@ -9,24 +9,25 @@ body {
   font-size: calc(6px + 1.5vmin);
 }
 .home {
-  font-size: 0;
-  height: 70vh;
-  padding-bottom: 8vh;
+  /* font-size: 0; */
+  /* height: 70vh; */
+  /* padding-bottom: 8vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: absolute;
-  bottom: 2px;
-  right: 2vw;
-  left: 2vw;
+  padding: 20vh 10vh;
+  /* position: absolute; */
+  /* bottom: 2px; */
+  /* right: 2vw; */
+  /* left: 2vw; */
 }
 p {
   margin: 0;
 }
 .home-main-text {
   margin-left: 9vw;
-  font-size: 25px;
-  line-height: 40px;
+  font-size: 3.5vh;
+  line-height: 5vh;
 }
 .home-pitch,
 .home-developer {
@@ -54,13 +55,14 @@ p {
   font-family: 'Amatic SC', cursive;
   display: flex;
   flex-direction: row-reverse;
-  margin-right: 3vw;
-  font-size: 15px;
+  margin-right: 1vh;
+  margin-top: 2vh;
+  font-size: 2vh;
 }
 .list {
   font-family: 'Amatic SC', cursive;
   text-align: end;
-  font-size: 15px;
+  font-size: 2vh;
 }
 h2 {
   font-family: Playfair Display, serif;
@@ -189,18 +191,31 @@ a:hover {
 }
 
 /* landscape screen */
-@media only screen and (max-height: 500px) and (orientation: landscape) {
+/* @media only screen and (min-device-width: 480px) and (max-device-width: 815px) and (orientation: landscape) {
   .home {
     height: 35vw;
     left: 40vh;
     right: 1vh;
-    top: 7vw;
+    top: 10vw;
+    padding: 3vh 0;
   }
   .home-pitch,
-  .home-motto {
-    font-size: 20px;
-    line-height: 30px;
+  .home-developer {
+    font-size: 3vw;
+    line-height: 4vw;
     margin-bottom: 0px;
+  }
+  .home-middle-pitch {
+    display: flex;
+    flex-direction: row;
+  }
+  .home-motto {
+    font-size: 15px;
+    line-height: 15px;
+  }
+  .home-developer {
+    flex-direction: column;
+    margin-left: 1vh;
   }
   .things-i-enjoy {
     margin-top: 0px;
@@ -219,48 +234,48 @@ a:hover {
   .who-i-am {
     font-size: 4vh;
   }
-}
+} */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 400px) and (orientation: portrait) {
-  .home {
+@media only screen and (min-width: 400px)  {
+  /* .home {
     height: 90vh;
     max-height: 550px;
     left: 12vw;
     right: 7vw;
     top: 18vh;
     padding: 0;
-  }
+  } */
   .home-main-text {
     margin-left: 5vw;
   }
-  .home-pitch,
+  /* .home-pitch,
   .home-developer {
     font-size: 30px;
     line-height: 45px;
-  }
-  .home-motto {
+  } */
+  /* .home-motto {
     font-size: 35px;
     line-height: 40px;
     letter-spacing: 2px;
-  }
-  .things-i-enjoy {
+  } */
+  /* .things-i-enjoy {
     font-size: 25px;
     margin-right: 2vw;
   }
   .list {
     font-size: 25px;
-  }
-  .home-middle-pitch {
+  } */
+  /* .home-middle-pitch {
     display: flex;
     flex-direction: column-reverse;
     margin: 0;
     padding: 0;
-  }
-  .home-developer {
+  } */
+  /* .home-developer {
     flex-direction: row;
-  }
+  } */
   a {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
   }
   .profile-pic {
     width: 30vw;
@@ -278,19 +293,19 @@ a:hover {
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) and (orientation: portrait){
-  .home {
+@media only screen and (min-width: 768px) {
+  /* .home {
     height: 80vh;
     max-height: 600px;
-  }
+  } */
   .home-pitch,
   .home-developer {
-    font-size: 40px;
-    line-height: 62px;
+    font-size: 5vh;
+    line-height: 7vh;
   }
   .home-motto {
-    font-size: 28px;
-    line-height: 30px;
+    font-size: 3vh;
+    line-height: 3.5vh;
   }
   .home-middle-pitch {
     flex-direction: row;
@@ -312,25 +327,25 @@ a:hover {
   }
 }
 /* Large devices (laptops/desktops, 992px and up)  */
-@media only screen and (min-width: 992px){
-  .home {
+@media only screen and (min-width: 992px) {
+  /* .home {
     top: 15vw;
-  }
-  .home-pitch,
+  } */
+.home-pitch,
   .home-developer {
-    font-size: 50px;
-    line-height: 70px;
+    /* font-size: 50px; */
+    line-height: 7vh;
   }
   .home-motto {
-    font-size: 35px;
-    line-height: 36px;
-  }
+    font-size: 3vh;
+    line-height: 3.2vh;
+  } 
   .things-i-enjoy {
-    font-size: 30px;
+    font-size: 3vh;
     margin-right: 1vw;
   }
   .list {
-    font-size: 30px;
+    font-size: 3vh;
   }
   .about {
     font-size: 2.5vh;
@@ -346,12 +361,20 @@ a:hover {
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px){
+@media only screen and (min-width: 1200px) {
+  .home {
+    padding: 20vh 20vh;
+
+  }
   .things-i-enjoy {
     margin-right: 2vw;
   }
   a {
     font-size: 0.8rem;
+  }
+    .home-motto {
+    font-size: 3.3vh;
+    line-height: 3.5vh;
   }
   .about {
     flex-direction: row;
