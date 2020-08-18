@@ -25,7 +25,7 @@ class About extends Component {
           <p>{Constants.aboutMe}</p>
           <br></br>
           <p className="about-last">
-            Feel free to reach out wheather it be about some typos, color and font decision or just want to learn more about me 🕊
+            Feel free to reach out about anything - I'm open to design feedback and I enjoy meeting new people
             </p>
         </div>
       </div>

@@ -30,6 +30,7 @@ class Projects extends React.Component {
             </ParallaxLayer>
           ))}
 
+<p>click project images for details</p>
           {Object.keys(projects).map((project, idx) => {
             return (
               <React.Fragment key={idx}>
@@ -54,6 +55,7 @@ class Projects extends React.Component {
                               opacity: opacity.interpolate(o => 1 - o), transform: transform,
                             }}
                           >
+                            <a>{projects[project].url}</a>
                             <img src={projects[project].img} alt={project} className='project-image' />
                           </animated.div>
                           <animated.div
