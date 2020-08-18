@@ -9,17 +9,10 @@ body {
   font-size: calc(6px + 1.5vmin);
 }
 .home {
-  /* font-size: 0; */
-  /* height: 70vh; */
-  /* padding-bottom: 8vh; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 20vh 5vh;
-  /* position: absolute; */
-  /* bottom: 2px; */
-  /* right: 2vw; */
-  /* left: 2vw; */
 }
 p {
   margin: 0;
@@ -90,7 +83,6 @@ h2 {
   height: 30vw;
   border-radius: 10px;
 }
-
 .project-image-container:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
 }
@@ -189,52 +181,6 @@ a:hover {
   font-weight: 500;
   font-size: 2vh;
 }
-
-/* landscape screen */
-/* @media only screen and (min-device-width: 480px) and (max-device-width: 815px) and (orientation: landscape) {
-  .home {
-    height: 35vw;
-    left: 40vh;
-    right: 1vh;
-    top: 10vw;
-    padding: 3vh 0;
-  }
-  .home-pitch,
-  .home-developer {
-    font-size: 3vw;
-    line-height: 4vw;
-    margin-bottom: 0px;
-  }
-  .home-middle-pitch {
-    display: flex;
-    flex-direction: row;
-  }
-  .home-motto {
-    font-size: 15px;
-    line-height: 15px;
-  }
-  .home-developer {
-    flex-direction: column;
-    margin-left: 1vh;
-  }
-  .things-i-enjoy {
-    margin-top: 0px;
-  }
-  .profile-pic {
-    width: 40vh;
-  }
-  .about {
-    flex-direction: row;
-    font-size: 4.5vh;
-    line-height: 5vh;
-    padding: 0 3vw;
-    margin-left: 10px;
-  }
-  .about-last,
-  .who-i-am {
-    font-size: 4vh;
-  }
-} */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 370px) {
   .home {
@@ -243,32 +189,6 @@ a:hover {
   .home-main-text {
     margin-left: 5vw;
   }
-  /* .home-pitch,
-  .home-developer {
-    font-size: 30px;
-    line-height: 45px;
-  } */
-  /* .home-motto {
-    font-size: 35px;
-    line-height: 40px;
-    letter-spacing: 2px;
-  } */
-  /* .things-i-enjoy {
-    font-size: 25px;
-    margin-right: 2vw;
-  }
-  .list {
-    font-size: 25px;
-  } */
-  /* .home-middle-pitch {
-    display: flex;
-    flex-direction: column-reverse;
-    margin: 0;
-    padding: 0;
-  } */
-  /* .home-developer {
-    flex-direction: row;
-  } */
   a {
     font-size: 0.6rem;
   }
@@ -290,10 +210,6 @@ a:hover {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-  /* .home {
-    height: 80vh;
-    max-height: 600px;
-  } */
   .home-pitch,
   .home-developer {
     font-size: 5vh;
@@ -324,12 +240,8 @@ a:hover {
 }
 /* Large devices (laptops/desktops, 992px and up)  */
 @media only screen and (min-width: 992px) {
-  /* .home {
-    top: 15vw;
-  } */
   .home-pitch,
   .home-developer {
-    /* font-size: 50px; */
     line-height: 7vh;
   }
   .home-motto {
