@@ -3,8 +3,9 @@ import constants from "./Constants";
 import { Spring, animated } from "react-spring/renderprops";
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
 import cottonCandy from './Constants/cottonCandy.png'
+import upArrow from './Constants/up.png'
+import downArrow from './Constants/down.png'
 const projects = constants.projects
-
 class Projects extends React.Component {
   constructor(props) {
     super(props)
@@ -21,11 +22,10 @@ class Projects extends React.Component {
     this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false })
   }
   render() {
-    const offsetTest = [0, 0.8, 1.2, 1.99, 2.4, 3.7]
     const projectDescStyle = ['#008080', '#DAA520', '#FF8C00', '#20B2AA', 'deeppink']
     return (
       <React.Fragment>
-        <Parallax ref={ref => (this.parallax = ref)} pages={3.4}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={5}>
           {cottonCandyBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
               <img src={cottonCandy} alt='cotton-candy' style={el.imgStyle} />
@@ -37,9 +37,10 @@ class Projects extends React.Component {
             return (
               <React.Fragment key={idx}>
                 <ParallaxLayer
-                  offset={offsetTest[idx]}
+                  offset={idx}
                   speed={0.4}
                   className='project'
+                  style={{ height: '75vh' }}
                 >
                   <Spring
                     native
@@ -78,6 +79,27 @@ class Projects extends React.Component {
                       )
                     }}
                   </Spring>
+                  <div className='arrows'>
+                    {idx === 0 || idx === 4 ?
+                      <div></div> :
+                      <img
+                        className='upArrow'
+                        src={upArrow}
+                        alt='up-arrow'
+                        onClick={() => this.parallax.scrollTo(idx === 4 ? 0 : idx - 1)} />}
+
+                    {idx === 4 ?
+                      <img
+                        className='upArrow'
+                        src={upArrow}
+                        alt='up-arrow'
+                        onClick={() => this.parallax.scrollTo(0)} /> :
+                      <img
+                        className='downArrow'
+                        src={downArrow}
+                        alt='down-arrow'
+                        onClick={() => this.parallax.scrollTo(idx + 1)} />}
+                  </div>
                 </ParallaxLayer>
               </React.Fragment>
             )
@@ -146,13 +168,5 @@ const cottonCandyBackground = [
 
   { offset: 4.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
   { offset: 4.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
-  { offset: 4.5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '40%' } },
-  // { offset: 4.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },
-  // { offset: 4.6, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '5%' } },
-  // { offset: 4.7, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '80%' } },
-  // { offset: 4.7, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '20%' } },
-  // { offset: 5.2, speed: 1, style: { opacity: 0.7 }, imgStyle: { width: '20%', marginLeft: '17%' } },
-  // { offset: 4.9, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '25%' } },
-  // { offset: 4.9, speed: 0.2, style: { opacity: 0.6 }, imgStyle: { width: '10%', marginLeft: '65%' } },
-  // { offset: 5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '95%' } },
+  { offset: 4.5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '40%' } }
 ]
