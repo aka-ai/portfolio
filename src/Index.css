@@ -347,6 +347,7 @@ a:hover {
     font-size: 2.5vh;
     line-height: 3.8vh;
     padding: 7vh 5vw;
+    margin-top: 0vh;
   }
   .profile-pic {
     width: 20vw;
@@ -411,5 +412,19 @@ a:hover {
   }
   .list {
     font-size: 3vh;
+  }
+  .about {
+    flex-direction: row;
+    padding: 0vw 5vw;
+    font-size: 2.4vw;
+    line-height: 3vw;
+    margin-top: 0vh;
+  }
+  .profile-pic {
+    width: 20vw;
+  }
+  .about-last, .who-i-am {
+    font-size: 2.5vw;
+    line-height: 3vw
   }
 }
