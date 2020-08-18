@@ -8,7 +8,7 @@ const projects = constants.projects
 class Projects extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false }
+    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false }
     this.clickHandle = this.clickHandle.bind(this)
     this.onMouseLeaveHandle = this.onMouseLeaveHandle.bind(this)
   }
@@ -18,11 +18,11 @@ class Projects extends React.Component {
     this.setState(newstate)
   }
   onMouseLeaveHandle() {
-    this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false })
+    this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false })
   }
   render() {
     const offsetTest = [0, 0.8, 1.2, 1.99, 2.4, 3.7]
-    const projectDescStyle = ['#008080', '#DAA520', '#FF8C00', '#20B2AA', 'deeppink' ]
+    const projectDescStyle = ['#008080', '#DAA520', '#FF8C00', '#20B2AA', 'deeppink']
     return (
       <React.Fragment>
         <Parallax ref={ref => (this.parallax = ref)} pages={3.4}>
@@ -69,7 +69,7 @@ class Projects extends React.Component {
                             }}
                           >
                             <div className='project-desc'>
-                              <h3 style={{ color: projectDescStyle[idx]}}>{projects[project].title}</h3>
+                              <h3 style={{ color: projectDescStyle[idx] }}>{projects[project].title}</h3>
                               <p>{projects[project].desc}</p>
                               <p>{projects[project].tech}</p>
                             </div>
