@@ -8,7 +8,7 @@ const projects = constants.projects
 class Projects extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false} 
+    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false }
     this.clickHandle = this.clickHandle.bind(this)
     this.onMouseLeaveHandle = this.onMouseLeaveHandle.bind(this)
   }
@@ -18,32 +18,34 @@ class Projects extends React.Component {
     this.setState(newstate)
   }
   onMouseLeaveHandle() {
-    this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false } )
+    this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false })
   }
   render() {
+    const offsetTest = [0, 0.8, 1.2, 1.99, 2.4, 3.7]
+    const projectDescStyle = ['#008080', '#DAA520', '#FF8C00', '#20B2AA', 'deeppink' ]
     return (
       <React.Fragment>
-        <Parallax ref={ref => (this.parallax = ref)} pages={4}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={3.4}>
           {cottonCandyBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
               <img src={cottonCandy} alt='cotton-candy' style={el.imgStyle} />
             </ParallaxLayer>
           ))}
 
-<p>click project images for details</p>
+          <p>click project images for details</p>
           {Object.keys(projects).map((project, idx) => {
             return (
               <React.Fragment key={idx}>
                 <ParallaxLayer
-                  offset={idx}
+                  offset={offsetTest[idx]}
                   speed={0.4}
                   className='project'
-                  >
+                >
                   <Spring
                     native
                     from={{ opacity: 1 }}
                     to={{ opacity: this.state[project] ? 1 : 0, transform: `perspective(600px) rotateX(${this.state[project] ? 180 : 0}deg)` }}
-                    >
+                  >
                     {({ opacity, transform }) => {
                       return (
                         <React.Fragment >
@@ -55,7 +57,6 @@ class Projects extends React.Component {
                               opacity: opacity.interpolate(o => 1 - o), transform: transform,
                             }}
                           >
-                            <a>{projects[project].url}</a>
                             <img src={projects[project].img} alt={project} className='project-image' />
                           </animated.div>
                           <animated.div
@@ -68,7 +69,9 @@ class Projects extends React.Component {
                             }}
                           >
                             <div className='project-desc'>
+                              <h3 style={{ color: projectDescStyle[idx]}}>{projects[project].title}</h3>
                               <p>{projects[project].desc}</p>
+                              <p>{projects[project].tech}</p>
                             </div>
                           </animated.div>
                         </React.Fragment>
@@ -140,4 +143,16 @@ const cottonCandyBackground = [
   { offset: 3.9, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '25%' } },
   { offset: 3.9, speed: 0.2, style: { opacity: 0.6 }, imgStyle: { width: '10%', marginLeft: '65%' } },
   { offset: 4, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '95%' } },
+
+  { offset: 4.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
+  { offset: 4.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
+  { offset: 4.5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '40%' } },
+  // { offset: 4.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },
+  // { offset: 4.6, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '5%' } },
+  // { offset: 4.7, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '80%' } },
+  // { offset: 4.7, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '20%' } },
+  // { offset: 5.2, speed: 1, style: { opacity: 0.7 }, imgStyle: { width: '20%', marginLeft: '17%' } },
+  // { offset: 4.9, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '25%' } },
+  // { offset: 4.9, speed: 0.2, style: { opacity: 0.6 }, imgStyle: { width: '10%', marginLeft: '65%' } },
+  // { offset: 5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '95%' } },
 ]
