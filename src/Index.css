@@ -15,7 +15,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 20vh 10vh;
+  padding: 20vh 5vh;
   /* position: absolute; */
   /* bottom: 2px; */
   /* right: 2vw; */
@@ -236,15 +236,10 @@ a:hover {
   }
 } */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 400px)  {
-  /* .home {
-    height: 90vh;
-    max-height: 550px;
-    left: 12vw;
-    right: 7vw;
-    top: 18vh;
-    padding: 0;
-  } */
+@media only screen and (min-width: 370px) {
+  .home {
+    padding: 15vh 2vh;
+  }
   .home-main-text {
     margin-left: 5vw;
   }
@@ -292,6 +287,7 @@ a:hover {
     line-height: 3vh;
   }
 }
+
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   /* .home {
@@ -331,7 +327,7 @@ a:hover {
   /* .home {
     top: 15vw;
   } */
-.home-pitch,
+  .home-pitch,
   .home-developer {
     /* font-size: 50px; */
     line-height: 7vh;
@@ -339,7 +335,7 @@ a:hover {
   .home-motto {
     font-size: 3vh;
     line-height: 3.2vh;
-  } 
+  }
   .things-i-enjoy {
     font-size: 3vh;
     margin-right: 1vw;
@@ -364,7 +360,6 @@ a:hover {
 @media only screen and (min-width: 1200px) {
   .home {
     padding: 20vh 20vh;
-
   }
   .things-i-enjoy {
     margin-right: 2vw;
@@ -372,7 +367,7 @@ a:hover {
   a {
     font-size: 0.8rem;
   }
-    .home-motto {
+  .home-motto {
     font-size: 3.3vh;
     line-height: 3.5vh;
   }
@@ -387,6 +382,34 @@ a:hover {
   }
   .about-last,
   .who-i-am {
+    font-size: 3vh;
+  }
+}
+/*mobile landscape */
+@media only screen and (max-height: 414px) and (min-width: 568px) {
+  .home {
+    padding: 8vw 20vw;
+  }
+  .home-middle-pitch {
+    flex-direction: row;
+  }
+  .home-developer {
+    flex-direction: column;
+    margin-left: 2vw;
+  }
+  .home-main-text {
+    font-size: 6vh;
+    line-height: 8vh;
+  }
+  .home-motto {
+    font-size: 4vh;
+    line-height: 4vh;
+  }
+  .things-i-enjoy {
+    font-size: 3vh;
+    margin-right: 2vw;
+  }
+  .list {
     font-size: 3vh;
   }
 }
