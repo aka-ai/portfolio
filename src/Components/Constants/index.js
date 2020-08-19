@@ -31,7 +31,7 @@ const Constants = {
       desc: `A movie retail web app. First project at Fullstack Academy as a team of 4.`,
       tech: `Technologies: React, Redux, Express, PostgreSQL, Sequelize, Node.js, Heroku`,
       img: bumbleBee,
-      url: "bb"
+      url: "https://thunderbirds-shopper.herokuapp.com"
     },
     aicooks: {
       title: `Aicooks`,

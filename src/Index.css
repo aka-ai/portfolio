@@ -86,7 +86,8 @@ h2 {
 .project-image-container:hover {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
 }
-.project-image, .project-desc {
+.project-image,
+.project-desc {
   max-width: 1500px;
   max-height: 1500px;
   min-width: 300px;
@@ -101,7 +102,7 @@ h2 {
   justify-content: center;
   align-items: center;
 }
-.project-desc p{
+.project-desc p {
   padding: 1vw;
   font-family: 'Open Sans Condensed', sans- serif;
   font-size: 1.5vw;
@@ -121,17 +122,49 @@ h2 {
   align-items: flex-end;
   padding-right: 3vw;
 }
-.upArrow, .downArrow {
+.upArrow,
+.downArrow {
   width: 3vw;
-
-
 }
-:hover.upArrow, :hover.downArrow {
+:hover.upArrow,
+:hover.downArrow {
   -moz-box-shadow: 0 0 5px 6px rgb(232, 230, 232);
--webkit-box-shadow: 0 0 5px 6px rgb(232, 230, 232);
-box-shadow: 0px 0px 5px 6px rgb(232, 230, 232);
-border-radius:190px;
+  -webkit-box-shadow: 0 0 5px 6px rgb(232, 230, 232);
+  box-shadow: 0px 0px 5px 6px rgb(232, 230, 232);
+  border-radius: 190px;
 }
+.popup {
+  position: absolute;
+  top: 10vh;
+  right: 30vw;
+  z-index: 1000;
+  padding: 1.5vh;
+  background: rgba(252, 208, 211, 0.605);
+  border-radius: 50px;
+  width: 5vw;
+  height: 5vw;
+}
+
+.close {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  font-size: 2vh;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.close:hover {
+  color: deeppink;
+}
+.popup .content {
+  font-family: 'Love Ya Like A Sister', cursive;
+  text-transform: uppercase;
+  font-size: 1vw;
+  text-align: center;
+  padding-top: 1vh;
+}
+/* ***************** */
 .nav-bar {
   display: flex;
   justify-content: space-between;
@@ -319,6 +352,110 @@ a:hover {
   .who-i-am {
     font-size: 3vh;
   }
+  .project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  left: 0;
+}
+.project-image-container {
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.3);
+  background-color: transparent;
+  will-change: 'transform, opacity';
+  max-width: 1500px;
+  max-height: 1500px;
+  min-width: 300px;
+  min-height: 300px;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 10px;
+}
+.project-image-container:hover {
+  box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
+}
+.project-image,
+.project-desc {
+  max-width: 1500px;
+  max-height: 1500px;
+  min-width: 300px;
+  min-height: 300px;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 10px;
+}
+.project-desc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.project-desc p {
+  padding: 1vw;
+  font-family: 'Open Sans Condensed', sans- serif;
+  font-size: 1.5vw;
+}
+.project-desc h3 {
+  font-family: 'Open Sans Condensed', sans- serif;
+  font-size: 2vw;
+}
+.arrows {
+  max-height: 1500px;
+  min-height: 300px;
+  width: 100%;
+  height: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-right: 3vw;
+}
+.upArrow,
+.downArrow {
+  width: 3vw;
+}
+:hover.upArrow,
+:hover.downArrow {
+  -moz-box-shadow: 0 0 5px 6px rgb(232, 230, 232);
+  -webkit-box-shadow: 0 0 5px 6px rgb(232, 230, 232);
+  box-shadow: 0px 0px 5px 6px rgb(232, 230, 232);
+  border-radius: 190px;
+}
+.popup {
+  position: absolute;
+  top: 10vh;
+  right: 30vw;
+  z-index: 1000;
+  padding: 1.5vh;
+  background: rgba(252, 208, 211, 0.605);
+  border-radius: 50px;
+  width: 5vw;
+  height: 5vw;
+}
+
+.close {
+  position: absolute;
+  top: 1vh;
+  right: 1vw;
+  font-size: 2vh;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.close:hover {
+  color: deeppink;
+}
+.popup .content {
+  font-family: 'Love Ya Like A Sister', cursive;
+  text-transform: uppercase;
+  font-size: 1vw;
+  text-align: center;
+  padding-top: 1vh;
+}
 }
 /*mobile landscape */
 @media only screen and (max-height: 414px) and (min-width: 568px) {
@@ -357,8 +494,9 @@ a:hover {
   .profile-pic {
     width: 20vw;
   }
-  .about-last, .who-i-am {
+  .about-last,
+  .who-i-am {
     font-size: 2.5vw;
-    line-height: 3vw
+    line-height: 3vw;
   }
 }

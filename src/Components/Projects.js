@@ -9,9 +9,10 @@ const projects = constants.projects
 class Projects extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false }
+    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false, popupClicked: false}
     this.clickHandle = this.clickHandle.bind(this)
     this.onMouseLeaveHandle = this.onMouseLeaveHandle.bind(this)
+    this.popupClickHandle = this.popupClickHandle.bind(this)
   }
   clickHandle(project) {
     const newstate = this.state
@@ -21,18 +22,27 @@ class Projects extends React.Component {
   onMouseLeaveHandle() {
     this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false })
   }
+  popupClickHandle() {
+    this.setState({ popupClicked: true})
+  }
   render() {
     const projectDescStyle = ['#008080', '#DAA520', '#FF8C00', '#20B2AA', 'deeppink']
     return (
       <React.Fragment>
+        {this.state.popupClicked ? <div></div> :
+          <div className="popup" >
+            <p className="close" onClick={this.popupClickHandle}>×</p>
+            <div className="content">
+              click image for details
+            </div>
+          </div>
+  }
         <Parallax ref={ref => (this.parallax = ref)} pages={5}>
           {cottonCandyBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
               <img src={cottonCandy} alt='cotton-candy' style={el.imgStyle} />
             </ParallaxLayer>
           ))}
-
-          <p>click project images for details</p>
           {Object.keys(projects).map((project, idx) => {
             return (
               <React.Fragment key={idx}>
