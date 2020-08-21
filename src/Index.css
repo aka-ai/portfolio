@@ -348,7 +348,14 @@ a:hover {
     font-size: 2.5vw;
   }
   .popup {
-    right: 20vw;
+    top: 20vh;
+    right: 24vw;
+    width: 9vh;
+    height: 9vh;
+  }
+  .popup .content {
+    font-size: 1.6vh;
+    padding-top: 2vh;
   }
   .arrows {
     height: 60vw;
@@ -390,30 +397,34 @@ a:hover {
   .project-image-container,
   .project-image,
   .project-desc {
-    width: 30vw;
-    height: 30vw;
+    width: 50vh;
+    height: 50vh;
   }
-
   .project-desc h3 {
-    font-size: 2.5vw;
+    font-size: 3vh;
   }
   .project-desc p {
-    padding: 1.5vw;
-    font-size: 1.5vw;
+    padding: 1vh 3vh;
+    font-size: 3vh;
   }
   .arrows {
-    height: 40vw;
-    padding-right: 5vw;
+    height: 55vh;
+    padding-right: 5vh;
   }
   .popup {
-    top: 17vh;
-    right: 32vw;
-    width: 5vw;
-    height: 5vw;
+    top: 20vh;
+    right: 30vw;
+    width: 7vh;
+    height: 7vh;
   }
   .popup .content {
-    font-size: 1vw;
+    font-size: 1.3vh;
     padding-top: 1vh;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .popup {
+    right: 33vw;
   }
 }
 /*mobile landscape */
