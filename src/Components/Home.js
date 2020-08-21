@@ -59,15 +59,15 @@ class Home extends Component {
           <List
             className="list"
             items={this.state.data}
-            keys={d => d.name}
-            heights={d => d.height}
+            keys={d => d}
+            heights={d => 5}
             style={{ position: 'relative' }}
             config={{ mass: 4, tension: 100, friction: 40 }}>
             {item => {
-              if (item.name === this.state.data[0].name) {
+              if (item === this.state.data[0]) {
                 return (<div
                   style={{ color: 'deeppink', marginRight: '2vw' }}>
-                  <p>{item.name}</p>
+                  <p>{item}</p>
                 </div>
                 )
               }
