@@ -2,6 +2,7 @@ body {
   background-color: #f0ede8;
   max-width: 100%;
   margin: 0px;
+  overflow: hidden;
 }
 .App {
   font-family: 'Nunito', sans-serif;
@@ -456,8 +457,8 @@ a:hover {
   }
   .about {
     flex-direction: row;
-    padding: 0vw 5vw;
-    font-size: 2.4vw;
+    padding: 0vw 4vw;
+    font-size: 2vw;
     line-height: 3vw;
     margin-top: 0vh;
   }
@@ -466,7 +467,7 @@ a:hover {
   }
   .about-last,
   .who-i-am {
-    font-size: 2.5vw;
+    font-size: 2vw;
     line-height: 3vw;
   }
   .project {
