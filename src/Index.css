@@ -100,6 +100,19 @@ h2 {
   font-family: 'Open Sans Condensed', sans- serif;
   font-size: 3.5vw;
 }
+.link-to-project {
+  width: 70vw;
+  height: 4vh;
+  display: flex;
+  justify-content: flex-end;
+}
+.link-to-project img {
+  width: 3vh;
+  height: 3vh;
+  padding-bottom: 2vw;
+  padding-right: 3vw;
+  color: #e0b421;
+}
 .arrows {
   width: 100%;
   height: 90vw;
@@ -289,6 +302,9 @@ a:hover {
     width: 55vw;
     height: 55vw;
   }
+  .link-to-project {
+    width: 55vw;
+  }
   .project-desc p {
     padding: 3vw;
     font-size: 3vw;
@@ -343,6 +359,9 @@ a:hover {
   .project-desc {
     width: 40vw;
     height: 40vw;
+  }
+  .link-to-project {
+    width: 40vw;
   }
   .project-desc p {
     padding: 3vw;
@@ -400,6 +419,9 @@ a:hover {
   .project-desc {
     width: 50vh;
     height: 50vh;
+  }
+  .link-to-project {
+    width: 50vh;
   }
   .project-desc h3 {
     font-size: 3vh;
@@ -478,6 +500,9 @@ a:hover {
   .project-desc {
     width: 60vh;
     height: 60vh;
+  }
+  .link-to-project {
+    width: 60vh;
   }
   .project-desc p {
     padding: 1vw 2vw;

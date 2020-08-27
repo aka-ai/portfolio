@@ -2,10 +2,17 @@ import React from "react";
 import constants from "./Constants";
 import { Spring, animated } from "react-spring/renderprops";
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
+import { Link } from "react-router-dom";
 import cottonCandy from './Constants/cottonCandy.png'
 import upArrow from './Constants/up.png'
 import downArrow from './Constants/down.png'
+import tealLink from './Constants/teal-link.png'
+import mustardLink from './Constants/mustard-link.png'
+import yellowLink from './Constants/yellow-link.png'
+import blueLink from './Constants/blue-link.png'
+import homeIcon from './Constants/home-icon.png'
 const projects = constants.projects
+
 class Projects extends React.Component {
   constructor(props) {
     super(props)
@@ -26,7 +33,8 @@ class Projects extends React.Component {
     this.setState({ popupClicked: true})
   }
   render() {
-    const projectDescStyle = ['#008080', '#DAA520', '#FF8C00', '#20B2AA', 'deeppink']
+    const projectDescStyle = ['#008080', '#dfab29', '#e0b421', '#20B2AA', 'deeppink']
+    const linkIcons = [tealLink, mustardLink, yellowLink, blueLink, homeIcon]
     return (
       <React.Fragment>
         {this.state.popupClicked ? <div></div> :
@@ -83,6 +91,15 @@ class Projects extends React.Component {
                               <h3 style={{ color: projectDescStyle[idx] }}>{projects[project].title}</h3>
                               <p>{projects[project].desc}</p>
                               <p>{projects[project].tech}</p>
+                              {idx < linkIcons.length-1 ?
+                                <a className='link-to-project' href='https://isitflatyet.org' target='_blank' >
+                                  <img src={linkIcons[idx]} alt='link to isitflatyet.org' />
+                                </a>
+                                :
+                                <Link to='/' className='link-to-project'>
+                                  <img src={linkIcons[idx]} alt='go to homepage' />
+                                </Link>
+                                }
                             </div>
                           </animated.div>
                         </React.Fragment>
@@ -124,7 +141,7 @@ export default Projects;
 
 //react-spring doc: https://www.react-spring.io/docs/props/parallax
 //react-spring parellax example: https://codesandbox.io/s/nwq4j1j6lm?from-embed=&file=/src/index.js:843-856
-
+//link icon: https://www.flaticon.com/free-icon/link_115771#
 const cottonCandyBackground = [
 
   { offset: 0.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
