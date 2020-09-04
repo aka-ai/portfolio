@@ -16,9 +16,8 @@ const projects = constants.projects
 class Projects extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false, popupClicked: false}
+    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false, popupClicked: false }
     this.clickHandle = this.clickHandle.bind(this)
-    this.onMouseLeaveHandle = this.onMouseLeaveHandle.bind(this)
     this.popupClickHandle = this.popupClickHandle.bind(this)
   }
   clickHandle(project) {
@@ -26,15 +25,13 @@ class Projects extends React.Component {
     newstate[project] = !this.state[project]
     this.setState(newstate)
   }
-  onMouseLeaveHandle() {
-    this.setState({ coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false })
-  }
   popupClickHandle() {
-    this.setState({ popupClicked: true})
+    this.setState({ popupClicked: true })
   }
   render() {
     const projectDescStyle = ['#008080', '#dfab29', '#e0b421', '#20B2AA', 'deeppink']
     const linkIcons = [tealLink, mustardLink, yellowLink, blueLink, homeIcon]
+    const links = ['https://isitflatyet.org', 'https://wizards-of-code.web.app/', 'https://thunderbirds-shopper.herokuapp.com', 'https://www.aicooksthai.com/']
     return (
       <React.Fragment>
         {this.state.popupClicked ? <div></div> :
@@ -44,7 +41,7 @@ class Projects extends React.Component {
               click image for details
             </div>
           </div>
-  }
+        }
         <Parallax ref={ref => (this.parallax = ref)} pages={5}>
           {cottonCandyBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
@@ -70,7 +67,6 @@ class Projects extends React.Component {
                         <React.Fragment >
                           <animated.div
                             onClick={() => this.clickHandle(project)}
-                            onMouseLeave={this.onMouseLeaveHandle}
                             className='project-image-container'
                             style={{
                               opacity: opacity.interpolate(o => 1 - o), transform: transform,
@@ -80,7 +76,6 @@ class Projects extends React.Component {
                           </animated.div>
                           <animated.div
                             onClick={() => this.clickHandle(project)}
-                            onMouseLeave={this.onMouseLeaveHandle}
                             className='project-image-container'
                             style={{
                               opacity,
@@ -88,18 +83,20 @@ class Projects extends React.Component {
                             }}
                           >
                             <div className='project-desc'>
-                              <h3 style={{ color: projectDescStyle[idx] }}>{projects[project].title}</h3>
+                              <a href={links[idx]} target='_blank' rel="noopener noreferrer" >
+                                <h3 style={{ color: projectDescStyle[idx] }}>{projects[project].title}</h3>
+                              </a>
                               <p>{projects[project].desc}</p>
                               <p>{projects[project].tech}</p>
-                              {idx < linkIcons.length-1 ?
-                                <a className='link-to-project' href='https://isitflatyet.org' target='_blank' >
+                              {idx < linkIcons.length - 1 ?
+                                <a className='link-to-project' href={links[idx]} target='_blank' rel="noopener noreferrer" >
                                   <img src={linkIcons[idx]} alt='link to isitflatyet.org' />
                                 </a>
                                 :
                                 <Link to='/' className='link-to-project'>
                                   <img src={linkIcons[idx]} alt='go to homepage' />
                                 </Link>
-                                }
+                              }
                             </div>
                           </animated.div>
                         </React.Fragment>
@@ -142,6 +139,7 @@ export default Projects;
 //react-spring doc: https://www.react-spring.io/docs/props/parallax
 //react-spring parellax example: https://codesandbox.io/s/nwq4j1j6lm?from-embed=&file=/src/index.js:843-856
 //link icon: https://www.flaticon.com/free-icon/link_115771#
+//home icon: https://www.flaticon.com/free-icon/home_1946488?term=home&page=1&position=8#
 const cottonCandyBackground = [
 
   { offset: 0.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
