@@ -2,15 +2,6 @@ import React from "react";
 import constants from "./Constants";
 import { Spring, animated } from "react-spring/renderprops";
 import { Parallax, ParallaxLayer } from 'react-spring/renderprops-addons'
-import { Link } from "react-router-dom";
-import cottonCandy from './Constants/cottonCandy.png'
-import upArrow from './Constants/up.png'
-import downArrow from './Constants/down.png'
-import tealLink from './Constants/teal-link.png'
-import mustardLink from './Constants/mustard-link.png'
-import yellowLink from './Constants/yellow-link.png'
-import blueLink from './Constants/blue-link.png'
-import homeIcon from './Constants/home-icon.png'
 const projects = constants.projects
 
 class Projects extends React.Component {
@@ -29,9 +20,7 @@ class Projects extends React.Component {
     this.setState({ popupClicked: true })
   }
   render() {
-    console.log(this.state)
-    const projectDescStyle = ['#008080', '#dfab29', '#e0b421', '#20B2AA', 'deeppink']
-    const links = ['https://isitflatyet.org', 'https://wizards-of-code.web.app/', 'https://thunderbirds-shopper.herokuapp.com', 'https://www.aicooksthai.com/', '/']
+
     return (
       <React.Fragment>
         {this.state.popupClicked ? <div></div> :
@@ -43,14 +32,14 @@ class Projects extends React.Component {
           </div>
         }
         <Parallax ref={ref => (this.parallax = ref)} pages={5}>
-          {cottonCandyBackground.map((el, idx) => (
+          {constants.cottonCandyBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
-              <img src={cottonCandy} alt='cotton-candy' style={el.imgStyle} />
+              <img src={constants.cottonCandy} alt='cotton-candy' style={el.imgStyle} />
             </ParallaxLayer>
           ))}
           {Object.keys(projects).map((project, idx) => {
             return (
-              <React.Fragment key={idx}>
+              <React.Fragment key={project}>
                 <ParallaxLayer
                   offset={idx}
                   speed={0.4}
@@ -85,22 +74,23 @@ class Projects extends React.Component {
                             <div className='project-desc'>
                               {
                                 !this.state[project] ?
-                                  (<h3
-                                    style={{ color: projectDescStyle[idx]}}>
+                                  (<h3>
                                     {projects[project].title}
                                   </h3>)
                                   :
                                   (<a
-                                    href={links[idx]}
-                                    target='_blank' rel="noopener noreferrer" >
-                                    <h3
-                                      style={{ color: projectDescStyle[idx], textDecoration: "underline" }}>
+                                    href={projects[project].url}
+                                    target={project !== 'portfolio' ? '_blank' : ''} rel="noopener noreferrer" >
+                                    <h3>
                                       {projects[project].title}
                                     </h3>
                                   </a>)
                               }
                               <p>{projects[project].desc}</p>
-                              <p>{projects[project].tech}</p>
+                              <div className="technologies">
+                                {idx < 3 ? <p style={{ fontWeight: "bold" }}>Technologies</p> : ''}
+                                <p>{projects[project].tech}</p>
+                              </div>
                             </div>
                           </animated.div>
                         </React.Fragment>
@@ -108,23 +98,23 @@ class Projects extends React.Component {
                     }}
                   </Spring>
                   <div className='arrows'>
-                    {idx === 0 || idx === 4 ?
+                    {project === 'coronavirus' || project === 'portfolio' ?
                       <div></div> :
                       <img
                         className='upArrow'
-                        src={upArrow}
+                        src={constants.upArrow}
                         alt='up-arrow'
-                        onClick={() => this.parallax.scrollTo(idx === 4 ? 0 : idx - 1)} />}
+                        onClick={() => this.parallax.scrollTo(project === 'portfolio' ? 0 : idx - 1)} />}
 
-                    {idx === 4 ?
+                    {project === 'portfolio' ?
                       <img
                         className='upArrow'
-                        src={upArrow}
+                        src={constants.upArrow}
                         alt='up-arrow'
                         onClick={() => this.parallax.scrollTo(0)} /> :
                       <img
                         className='downArrow'
-                        src={downArrow}
+                        src={constants.downArrow}
                         alt='down-arrow'
                         onClick={() => this.parallax.scrollTo(idx + 1)} />}
                   </div>
@@ -144,62 +134,3 @@ export default Projects;
 //react-spring parellax example: https://codesandbox.io/s/nwq4j1j6lm?from-embed=&file=/src/index.js:843-856
 //link icon: https://www.flaticon.com/free-icon/link_115771#
 //home icon: https://www.flaticon.com/free-icon/home_1946488?term=home&page=1&position=8#
-const cottonCandyBackground = [
-
-  { offset: 0.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
-  { offset: 0.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
-  { offset: 0.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },
-  { offset: 0.5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '40%' } },
-  { offset: 0.6, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '5%' } },
-  { offset: 0.7, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '80%' } },
-  { offset: 0.7, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '15%' } },
-  { offset: 0.9, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '25%' } },
-  { offset: 0.9, speed: 0.2, style: { opacity: 0.6 }, imgStyle: { width: '10%', marginLeft: '65%' } },
-  { offset: 1, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '95%' } },
-
-  { offset: 1.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
-  { offset: 1.2, speed: 1, style: { opacity: 0.7 }, imgStyle: { width: '20%', marginLeft: '5%' } },
-  { offset: 1.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
-  { offset: 1.5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '40%' } },
-  { offset: 1.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },
-  { offset: 1.6, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '5%' } },
-  { offset: 1.7, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '80%' } },
-  { offset: 1.7, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '20%' } },
-  { offset: 2.2, speed: 1, style: { opacity: 0.7 }, imgStyle: { width: '20%', marginLeft: '5%' } },
-  { offset: 1.9, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '25%' } },
-  { offset: 1.9, speed: 0.2, style: { opacity: 0.6 }, imgStyle: { width: '10%', marginLeft: '65%' } },
-  { offset: 2, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '95%' } },
-
-  { offset: 2.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
-  { offset: 2.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
-  { offset: 2.5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '40%' } },
-  { offset: 2.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },
-  { offset: 2.6, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '5%' } },
-  { offset: 2.7, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '80%' } },
-  { offset: 2.7, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '20%' } },
-  { offset: 3.2, speed: 1, style: { opacity: 0.7 }, imgStyle: { width: '20%', marginLeft: '5%' } },
-  { offset: 2.9, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '25%' } },
-  { offset: 2.9, speed: 0.2, style: { opacity: 0.6 }, imgStyle: { width: '10%', marginLeft: '65%' } },
-  { offset: 3, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '95%' } },
-
-  { offset: 3.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
-  { offset: 3.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
-  { offset: 3.5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '40%' } },
-  { offset: 3.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },
-  { offset: 3.6, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '5%' } },
-  { offset: 3.7, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '80%' } },
-  { offset: 3.7, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '20%' } },
-  { offset: 3.9, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '25%' } },
-  { offset: 3.9, speed: 0.2, style: { opacity: 0.6 }, imgStyle: { width: '10%', marginLeft: '65%' } },
-  { offset: 4, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '95%' } },
-
-  { offset: 4.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '70%' } },
-  { offset: 4.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
-  { offset: 4.5, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '40%' } },
-  { offset: 4.6, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '5%' } },
-  { offset: 4, speed: 0, style: { opacity: 0.3 }, imgStyle: { width: '7%', marginLeft: '80%' } },
-  { offset: 4.4, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '15%', marginLeft: '20%' } },
-  { offset: 4.9, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '25%' } },
-  { offset: 4.7, speed: 0.2, style: { opacity: 0.6 }, imgStyle: { width: '10%', marginLeft: '65%' } },
-  { offset: 4.8, speed: 0, style: { opacity: 0.4 }, imgStyle: { width: '7%', marginLeft: '95%' } },
-]

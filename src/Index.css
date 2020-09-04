@@ -89,29 +89,24 @@ h2 {
 .project-desc {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
 .project-desc h3 {
   font-family: 'Open Sans Condensed', sans- serif;
-  font-size: 4vw;
+  color: #008080;
+  text-decoration: underline;
 }
-.project-desc p {
+.project-desc p,
+h3 {
   padding: 2vw;
   font-family: 'Open Sans Condensed', sans- serif;
   font-size: 3.5vw;
 }
-.link-to-project {
-  width: 70vw;
-  height: 4vh;
+.technologies {
   display: flex;
-  justify-content: flex-end;
-}
-.link-to-project img {
-  width: 3vh;
-  height: 3vh;
-  padding-bottom: 2vw;
-  padding-right: 1vw;
+  flex-direction: row;
+  align-items: center;
 }
 .arrows {
   width: 100%;
@@ -125,6 +120,7 @@ h2 {
 .downArrow {
   width: 15vw;
   height: 8vw;
+  opacity: 0.4;
   -webkit-filter: drop-shadow(3px 3px 7px rgba(250, 233, 233, 0.5));
   filter: drop-shadow(3px 3px 7px rgba(250, 233, 233, 0.5));
 }
@@ -132,6 +128,7 @@ h2 {
 :hover.downArrow {
   -webkit-filter: drop-shadow(3px 3px 7px rgba(191, 189, 189, 0.5));
   filter: drop-shadow(3px 3px 7px rgba(191, 189, 189, 0.5));
+  opacity: 0.8;
 }
 .popup {
   position: absolute;
@@ -260,7 +257,8 @@ a:hover {
     font-size: 3vh;
     line-height: 3vh;
   }
-  .project-desc p {
+  .project-desc p,
+  h3 {
     padding: 3vw;
     font-size: 4vw;
   }
@@ -301,10 +299,8 @@ a:hover {
     width: 55vw;
     height: 55vw;
   }
-  .link-to-project {
-    width: 55vw;
-  }
-  .project-desc p {
+  .project-desc p,
+  h3 {
     padding: 3vw;
     font-size: 3vw;
   }
@@ -354,10 +350,8 @@ a:hover {
     width: 40vw;
     height: 40vw;
   }
-  .link-to-project {
-    width: 40vw;
-  }
-  .project-desc p {
+  .project-desc p,
+  h3 {
     padding: 2vw;
     font-size: 2vw;
   }
@@ -414,18 +408,13 @@ a:hover {
     width: 50vh;
     height: 50vh;
   }
-  .link-to-project {
-    width: 50vh;
-  }
-  .project-desc h3 {
-    font-size: 3vh;
-  }
-  .project-desc p {
+  .project-desc p,
+  h3 {
     padding: 1vh 3vh;
-    font-size: 3vh;
+    font-size: 1.5vw;
   }
   .arrows {
-    height: 80vh
+    height: 80vh;
   }
   .popup {
     top: 20vh;
@@ -494,15 +483,10 @@ a:hover {
     width: 60vh;
     height: 60vh;
   }
-  .link-to-project {
-    width: 60vh;
-  }
-  .project-desc p {
+  .project-desc p,
+  h3 {
     padding: 1vw 2vw;
-    font-size: 3vh;
-  }
-  .project-desc h3 {
-    font-size: 4vh;
+    font-size: 1.5vw;
   }
   .popup {
     top: 20vh;
@@ -515,7 +499,7 @@ a:hover {
     padding-top: 1vh;
   }
   .arrows {
-    height: 65vh;
+    height: 80vh;
   }
   .upArrow,
   .downArrow {
