@@ -29,9 +29,9 @@ class Projects extends React.Component {
     this.setState({ popupClicked: true })
   }
   render() {
+    console.log(this.state)
     const projectDescStyle = ['#008080', '#dfab29', '#e0b421', '#20B2AA', 'deeppink']
-    const linkIcons = [tealLink, mustardLink, yellowLink, blueLink, homeIcon]
-    const links = ['https://isitflatyet.org', 'https://wizards-of-code.web.app/', 'https://thunderbirds-shopper.herokuapp.com', 'https://www.aicooksthai.com/']
+    const links = ['https://isitflatyet.org', 'https://wizards-of-code.web.app/', 'https://thunderbirds-shopper.herokuapp.com', 'https://www.aicooksthai.com/', '/']
     return (
       <React.Fragment>
         {this.state.popupClicked ? <div></div> :
@@ -83,20 +83,18 @@ class Projects extends React.Component {
                             }}
                           >
                             <div className='project-desc'>
-                              <a href={links[idx]} target='_blank' rel="noopener noreferrer" >
-                                <h3 style={{ color: projectDescStyle[idx] }}>{projects[project].title}</h3>
-                              </a>
+                              {
+                                !this.state[projects[project]] ?
+                                  (<h3 style={{ color: projectDescStyle[idx] }}>{projects[project].title}</h3>)
+                                  :
+                                  (<a
+                                    href={links[idx]}
+                                    target='_blank' rel="noopener noreferrer" >
+                                    <h3 style={{ color: projectDescStyle[idx] }}>{projects[project].title}</h3>
+                                  </a>)
+                              }
                               <p>{projects[project].desc}</p>
                               <p>{projects[project].tech}</p>
-                              {idx < linkIcons.length - 1 ?
-                                <a className='link-to-project' href={links[idx]} target='_blank' rel="noopener noreferrer" >
-                                  <img src={linkIcons[idx]} alt='link to isitflatyet.org' />
-                                </a>
-                                :
-                                <Link to='/' className='link-to-project'>
-                                  <img src={linkIcons[idx]} alt='go to homepage' />
-                                </Link>
-                              }
                             </div>
                           </animated.div>
                         </React.Fragment>
