@@ -84,13 +84,19 @@ class Projects extends React.Component {
                           >
                             <div className='project-desc'>
                               {
-                                !this.state[projects[project]] ?
-                                  (<h3 style={{ color: projectDescStyle[idx] }}>{projects[project].title}</h3>)
+                                !this.state[project] ?
+                                  (<h3
+                                    style={{ color: projectDescStyle[idx]}}>
+                                    {projects[project].title}
+                                  </h3>)
                                   :
                                   (<a
                                     href={links[idx]}
                                     target='_blank' rel="noopener noreferrer" >
-                                    <h3 style={{ color: projectDescStyle[idx] }}>{projects[project].title}</h3>
+                                    <h3
+                                      style={{ color: projectDescStyle[idx], textDecoration: "underline" }}>
+                                      {projects[project].title}
+                                    </h3>
                                   </a>)
                               }
                               <p>{projects[project].desc}</p>
