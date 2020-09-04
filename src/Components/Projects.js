@@ -71,6 +71,7 @@ class Projects extends React.Component {
                               transform: transform.interpolate(t => `${t} rotateX(180deg)`),
                             }}
                           >
+                            {this.state[project] ?
                             <div className='project-desc'>
                               {
                                 !this.state[project] ?
@@ -91,7 +92,7 @@ class Projects extends React.Component {
                                 {idx < 3 ? <p style={{ fontWeight: "bold" }}>Technologies</p> : ''}
                                 <p>{projects[project].tech}</p>
                               </div>
-                            </div>
+                            </div> : <div></div>}
                           </animated.div>
                         </React.Fragment>
                       )
