@@ -3,10 +3,10 @@ export default [
 'Wild Fermented Cider',
 'Deep Conversations',
 'Watching the Sunset',
-'Hosting Dinners',
-'Jindo Dogs',
-'Beach Camping',
+'Hosting Dinner Parties',
+'My Jindo Dog',
 'Hiking/Exploring the PNW',
-'Bread Making'
-  
+'Pizza Making',
+'Oysters',
+'Babysitting',
 ]
