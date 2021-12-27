@@ -4,9 +4,11 @@ export default [
 'Deep Conversations',
 'Watching the Sunset',
 'Hosting Dinner Parties',
-'My Jindo Dog',
+'Walking my Jindo Dog',
 'Hiking/Exploring the PNW',
 'Pizza Making',
 'Oysters',
-'Babysitting',
+'Kissing my baby',
+'Dark Chocolate',
+'Fashion Design',
 ]

@@ -25,7 +25,7 @@ const Constants = {
       desc: `A realtime web app multiplayer game. My capstone project for Fullstack Academy, worked as a team of 4.`,
       tech: `React, Web Workers, CSS Animation, Google Firebase Hosting, Google Cloud Firestore, Google Cloud Functions`,
       img: wizardsOfCode,
-      url: "https://wizards-of-code.web.app/"
+      url: "https://www.youtube.com/watch?v=L3sRXE7eCRU/"
     },
     bumbleBee: {
       title: `BumbleBee`,
