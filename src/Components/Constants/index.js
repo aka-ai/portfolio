@@ -25,14 +25,14 @@ const Constants = {
       desc: `A realtime web app multiplayer game. My capstone project for Fullstack Academy, worked as a team of 4.`,
       tech: `React, Web Workers, CSS Animation, Google Firebase Hosting, Google Cloud Firestore, Google Cloud Functions`,
       img: wizardsOfCode,
-      url: "https://www.youtube.com/watch?v=L3sRXE7eCRU/"
+      url: "https://youtu.be/L3sRXE7eCRU?t=148"
     },
     bumbleBee: {
       title: `BumbleBee`,
       desc: `A movie retail web app. First project at Fullstack Academy as a team of 4.`,
       tech: `React, Redux, Express, PostgreSQL, Sequelize, Node.js, Heroku`,
       img: bumbleBee,
-      url: "https://thunderbirds-shopper.herokuapp.com"
+      url: "https://github.com/Grace-Shopper-19-07/Grace-Shopper-Movies"
     },
     aicooks: {
       title: `Aicooks`,
