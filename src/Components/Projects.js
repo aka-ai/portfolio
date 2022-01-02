@@ -7,7 +7,7 @@ const projects = constants.projects
 class Projects extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, portfolio: false, popupClicked: false }
+    this.state = { coronavirus: false, wizardsOfCode: false, bumbleBee: false, aicooks: false, minesweeper: false, portfolio: false, popupClicked: false }
     this.clickHandle = this.clickHandle.bind(this)
     this.popupClickHandle = this.popupClickHandle.bind(this)
   }
@@ -31,7 +31,7 @@ class Projects extends React.Component {
             </div>
           </div>
         }
-        <Parallax ref={ref => (this.parallax = ref)} pages={5}>
+        <Parallax ref={ref => (this.parallax = ref)} pages={6}>
           {constants.cottonCandyBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
               <img src={constants.cottonCandy} alt='cotton-candy' style={el.imgStyle} />
