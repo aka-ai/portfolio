@@ -43,7 +43,7 @@ const Constants = {
     },
     minesweeper: {
       title: `Minesweeper`,
-      desc: `A sprint mini project, built within a day, to practice game logic in JavaScript.`,
+      desc: `A mini project built in a day to practice game logic in JavaScript.`,
       tech: `React, CSS, HTML, AWS Amplify`,
       img: minesweeper,
       url: "https://master.d2ucpq3vv3wy29.amplifyapp.com"
