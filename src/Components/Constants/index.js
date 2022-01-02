@@ -1,6 +1,6 @@
 import appLogo from "./aiLogo500white.png";
 import profilePic from "./profilePic.JPG";
-import { coronavirus, wizardsOfCode, bumbleBee, aicooks, portfolio } from "./projects";
+import { coronavirus, wizardsOfCode, bumbleBee, aicooks, portfolio, minesweeper } from "./projects";
 import cottonCandy from './cottonCandy.png'
 import upArrow from './up-arrow.png'
 import downArrow from './down-arrow.png'
@@ -40,6 +40,13 @@ const Constants = {
       tech: ``,
       img: aicooks,
       url: "https://aicooksthai.com"
+    },
+    minesweeper: {
+      title: `Minesweeper`,
+      desc: `A sprint mini project, built within a day, to practice game logic in JavaScript.`,
+      tech: `React, CSS, HTML, AWS Amplify`,
+      img: minesweeper,
+      url: "https://master.d2ucpq3vv3wy29.amplifyapp.com"
     },
     portfolio: {
       title: `This website`,
