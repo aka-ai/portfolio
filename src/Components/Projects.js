@@ -20,7 +20,6 @@ class Projects extends React.Component {
     this.setState({ popupClicked: true })
   }
   render() {
-
     return (
       <React.Fragment>
         {this.state.popupClicked ? <div></div> :
@@ -32,9 +31,9 @@ class Projects extends React.Component {
           </div>
         }
         <Parallax ref={ref => (this.parallax = ref)} pages={6}>
-          {constants.cottonCandyBackground.map((el, idx) => (
+          {constants.waterdropletBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
-              <img src={constants.cottonCandy} alt='cotton-candy' style={el.imgStyle} />
+              <img src={constants.waterdroplet} alt='cotton-candy' style={el.imgStyle} />
             </ParallaxLayer>
           ))}
           {Object.keys(projects).map((project, idx) => {

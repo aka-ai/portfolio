@@ -1,7 +1,7 @@
 import appLogo from "./aiLogo500white.png";
 import profilePic from "./profilePic.JPG";
 import { coronavirus, wizardsOfCode, bumbleBee, aicooks, portfolio, minesweeper } from "./projects";
-import cottonCandy from './cottonCandy.png'
+import waterdroplet from './waterdroplet.png'
 import upArrow from './up-arrow.png'
 import downArrow from './down-arrow.png'
 const Constants = {
@@ -56,10 +56,10 @@ const Constants = {
       url: "/"
     }
   },
-  cottonCandy,
+  waterdroplet,
   upArrow,
   downArrow,
-  cottonCandyBackground :[
+  waterdropletBackground :[
     { offset: 0.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '8%', marginLeft: '70%' } },
     { offset: 0.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
     { offset: 0.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },
