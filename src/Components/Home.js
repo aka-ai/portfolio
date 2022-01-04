@@ -10,7 +10,7 @@ class Home extends Component {
     this.shuffle = this.shuffle.bind(this)
   }
   shuffle = () => this.setState(state => ({ data: shuffle(state.data) }))
-  i() { 
+  i() {
     this.setState({
       intervalActive: setInterval(this.shuffle, 2000)
     })
@@ -29,7 +29,7 @@ class Home extends Component {
             <p>I've worked in fashion and</p>
             <p>Michelin-starred kitchens.</p>
             <p>I practiced web development.</p>
-            <p>I'm looking to become a</p>
+            <p>My current passion is</p>
           </div>
           <div className="home-middle-pitch">
             <div className="home-motto">
@@ -43,7 +43,7 @@ class Home extends Component {
                 <p>UX/UI&nbsp;</p>
               </div>
               <div style={{ color: "deeppink" }}>
-                <p>Designer</p>
+                <p>Design</p>
               </div>
             </div>
           </div>
