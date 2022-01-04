@@ -1,5 +1,5 @@
 import appLogo from "./aiLogo500white.png";
-import profilePic from "./profilePic.JPG";
+import profilePic from "./profilePic.jpg";
 import { coronavirus, wizardsOfCode, bumbleBee, aicooks, portfolio, minesweeper } from "./projects";
 import waterdroplet from './waterdroplet.png'
 import upArrow from './up-arrow.png'
@@ -59,7 +59,7 @@ const Constants = {
   waterdroplet,
   upArrow,
   downArrow,
-  waterdropletBackground :[
+  waterdropletBackground: [
     { offset: 0.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '8%', marginLeft: '70%' } },
     { offset: 0.2, speed: 0.2, style: { opacity: 0.5 }, imgStyle: { width: '10%', marginLeft: '12%' } },
     { offset: 0.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },
@@ -100,8 +100,10 @@ const Constants = {
 
     { offset: 3.4, speed: 1, style: { opacity: 0.7 }, imgStyle: { width: '10%', marginLeft: '25%' } },
     { offset: 3.1, speed: 0.5, style: { opacity: 0.5 }, imgStyle: { width: '8%', marginLeft: '70%' } },
-    { offset: 3.2, speed: 0.2, style: { opacity: 0.5 }, 
-    imgStyle: { width: '10%', marginLeft: '12%' } },
+    {
+      offset: 3.2, speed: 0.2, style: { opacity: 0.5 },
+      imgStyle: { width: '10%', marginLeft: '12%' }
+    },
     { offset: 4.5, speed: 2, style: { opacity: 0.7 }, imgStyle: { width: '17%', marginLeft: '60%' } },
     { offset: 3, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '8%', marginLeft: '2%' } },
     { offset: 3.35, speed: 0.2, style: { opacity: 0.4 }, imgStyle: { width: '10%', marginLeft: '90%' } },
