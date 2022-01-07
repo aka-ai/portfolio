@@ -8,7 +8,10 @@ const Constants = {
   brieflyAboutMe: `A fashion/chef turned software developer. I have an eye for design, a mind for learning and problem solving, and a hand for executing.`,
   workingStyle: ` I take pride of everything I do. I belive in striving for excellence.`,
 
-  aboutMe: `I was raised in rural Thailand with modest ambition, but once I moved to New York I learned to think bigger with a growth mindset. There I discovered my passions for the fashion and culinary worlds. During my time working in those fields, I found myself repeatedly looking for opportunities to utilize software to improve our processes, products, and services. I wanted to learn more about how to leverage software to communicate and enable customers, so I spent hundreds of hours learning to code and completed a coding bootcamp where I dove deeper, learned at a rapid pace, and built a variety of applications.`,
+  aboutMeA: 'I was raised in rural Thailand with modest ambition, but once I moved to New York I learned to think bigger with a growth mindset. There I discovered my passions for the fashion and culinary worlds.',
+  aboutMeB: 'During my time working in those fields, I found myself repeatedly looking for opportunities to utilize software to improve our processes, products, and services.',
+  aboutMeC: 'I wanted to learn more about how to leverage software to communicate and enable users, so I spent hundreds of hours learning to code and completed a coding bootcamp where I dove deeper, learned at a rapid pace, and built a variety of applications.',
+  aboutMeD: 'Now, I enjoy combining my creativity, my experience in design and my skills in software engineering together.',
 
   appLogo: appLogo,
   profilePic: profilePic,

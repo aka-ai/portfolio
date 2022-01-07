@@ -20,10 +20,11 @@ class About extends Component {
           <p>
             <span>A little bit about </span >
             <span className="who-i-am">who I am.</span>
-          </p>
-          <br></br>
-          <p>{Constants.aboutMe}</p>
-          <br></br>
+          </p><br></br>
+          <p>{Constants.aboutMeA}</p><br></br>
+          <p>{Constants.aboutMeB}</p><br></br>
+          <p>{Constants.aboutMeC}</p><br></br>
+          <p>{Constants.aboutMeD}</p><br></br>
           <p className="about-last">
             Feel free to reach out about anything - I'm open to design feedback and I enjoy meeting new people
             </p>
