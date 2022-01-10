@@ -31,9 +31,9 @@ class Projects extends React.Component {
           </div>
         }
         <Parallax ref={ref => (this.parallax = ref)} pages={6}>
-          {constants.waterdropletBackground.map((el, idx) => (
+          {constants.bubbleBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
-              <img src={constants.waterdroplet} alt='cotton-candy' style={el.imgStyle} />
+              <img src={constants.bubble} alt='cotton-candy' style={el.imgStyle} />
             </ParallaxLayer>
           ))}
           {Object.keys(projects).map((project, idx) => {
