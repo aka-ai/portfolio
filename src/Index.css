@@ -3,6 +3,7 @@ body {
   max-width: 100%;
   margin: 0px;
   overflow: hidden;
+  color: #333333;
 }
 .App {
   font-family: 'Nunito', sans-serif;
@@ -83,7 +84,7 @@ h2 {
   height: 70vw;
   border-radius: 10px;
 }
-.project-image-container:hover {
+:hover.project-image-container {
   box-shadow: 0px 30px 100px -10px rgba(0, 0, 0, 0.4);
 }
 .project-desc {
@@ -130,7 +131,7 @@ h3 {
   filter: drop-shadow(3px 3px 7px rgba(191, 189, 189, 0.5));
   opacity: 0.8;
 }
-.popup {
+/* .popup {
   position: absolute;
   top: 20vh;
   right: 10vw;
@@ -141,7 +142,7 @@ h3 {
   width: 10vw;
   height: 10vw;
   margin-top: 8vh;
-}
+} */
 .close {
   position: absolute;
   top: 0vh;
@@ -370,8 +371,8 @@ a:hover {
   }
   .upArrow,
   .downArrow {
-    width: 10vw;
-    height: 4.5vw;
+    width: 5vw;
+    height: 5vw;
   }
 }
 /* Extra large devices (large laptops and desktops, 1200px and up) */
