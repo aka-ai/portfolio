@@ -22,14 +22,6 @@ class Projects extends React.Component {
   render() {
     return (
       <React.Fragment>
-        {this.state.popupClicked ? <div></div> :
-          <div className="popup" >
-            <p className="close" onClick={this.popupClickHandle}>×</p>
-            <div className="content">
-              click image for details
-            </div>
-          </div>
-        }
         <Parallax ref={ref => (this.parallax = ref)} pages={6}>
           {constants.bubbleBackground.map((el, idx) => (
             <ParallaxLayer key={idx} offset={el.offset} speed={el.speed} style={el.style}>
@@ -52,7 +44,7 @@ class Projects extends React.Component {
                   >
                     {({ opacity, transform }) => {
                       return (
-                        <React.Fragment >
+                        <React.Fragment  >
                           <animated.div
                             onClick={() => this.clickHandle(project)}
                             className='project-image-container'
