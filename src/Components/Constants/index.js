@@ -42,7 +42,7 @@ const Constants = {
       desc: `Marketing website for my culinary brand Aicooks, built using Weebly`,
       tech: ``,
       img: aicooks,
-      url: "https://aicooksthai.com"
+      url: "https://www.aicooksthai.com"
     },
     minesweeper: {
       title: `Minesweeper`,
