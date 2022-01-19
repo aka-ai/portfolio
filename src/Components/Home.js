@@ -40,10 +40,10 @@ class Home extends Component {
             </div>
             <div className="home-developer">
               <div style={{ color: "deeppink" }}>
-                <p>UX/UI&nbsp;</p>
+                <p>Frontend Dev</p>
               </div>
               <div style={{ color: "deeppink" }}>
-                <p>Design</p>
+                <p>& Design</p>
               </div>
             </div>
           </div>
